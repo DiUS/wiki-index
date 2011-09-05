@@ -20,7 +20,7 @@ define "wiki-index" do
   project.group = GROUP
   manifest["Implementation-Vendor"] = COPYRIGHT
   
-  WIKITEXT = artifact("org.sweble.wikitext:jar:1.0.0")
+  WIKITEXT = artifact("org.sweble.wikitext:sweble-wikitext:jar:1.0.0")
 
   JUNIT4 = artifact("junit:junit:jar:4.8.2")
   HAMCREST = artifact("org.hamcrest:hamcrest-core:jar:1.2.1")
