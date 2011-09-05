@@ -1,0 +1,5 @@
+.DS_Store
+.redcar/
+buildfile.rb
+reports/
+target/

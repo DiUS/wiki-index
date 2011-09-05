@@ -29,8 +29,24 @@ define "wiki-index" do
   HAMCREST = artifact("org.hamcrest:hamcrest-core:jar:1.2.1")
   MOCKITO = artifact("org.mockito:mockito-all:jar:1.8.5")
        
+  puts artifact("junit:junit:jar:4.8.2").to_s
+
   compile.with WIKITEXT, LOG4J
   test.compile.with JUNIT4, HAMCREST, MOCKITO
   
   package(:jar)
+end
+
+task :mirah_tests => "wiki-index:test" do
+  TESTING_JARS = [  ]
+  
+  Buildr.ant.junit(:haltonfailure => 'true', :fork => 'true') do
+    classpath :path => (TESTING_JARS + ['target', 'test']).join(":")
+    batchtest do
+      fileset :dir => "test" do
+        include :name => '**/*Test.class'
+      end
+      formatter :type => 'plain', :usefile => 'false'
+    end
+  end
 end

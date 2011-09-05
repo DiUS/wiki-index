@@ -1,0 +1,429 @@
+{{About|the social science}}
+{{Globalize|article|the USA|date=August 2011|discuss=Talk:Anthropology#United States bias|1=intro ([[WP:lede|lede]]) &amp; the [[#Overview|Overview]] section}}
+{{Anthropology}}
+
+'''Anthropology''' {{IPAc-en|icon|æ|n|θ|r|ɵ|ˈ|p|ɒ|l|ə|dʒ|i}} is the study of humanity. It has origins in the [[humanities]], the [[natural science]]s, and the [[social science]]s.&lt;ref&gt;Wolf, Eric (1994) ''Perilous Ideas: Race, Culture, People.'' ''[[Current Anthropology]]'' 35: 1-7. p.227&lt;/ref&gt; The term &quot;[[wiktionary:anthropology|anthropology]]&quot; is from the [[Ancient Greek|Greek]] ''anthrōpos'' ({{lang|grc|ἄνθρωπος}}), &quot;man&quot;, understood to mean mankind or humanity, and ''[[wiktionary:-logia|-logia]]'' (-λογία), &quot;discourse&quot; or &quot;study&quot;, and was first used in 1501 by German philosopher [[Magnus Hundt]].&lt;ref name=Dieserud&gt;Dieserud, Juul (1908) ''[http://books.google.com/books?id=ZcISAAAAYAAJ&amp;dq=the+scope+and+content+of+the+science+of+anthropology&amp;source=gbs_navlinks_s The Scope and Content of the Science of Anthropology]'' London:Open Court Publishing ISBN 0802139434&lt;/ref&gt;
+
+Anthropology's basic concerns are &quot;What defines human life and society?&quot;, &quot;How are social relations among humans organized?&quot;, &quot;Who are the ancestors of modern ''Homo sapiens''?&quot;, &quot;What are humans' physical traits?&quot;, &quot;How do humans behave?&quot;, &quot;Why are there variations among different groups of humans?&quot;, &quot;How has the evolutionary past of ''Homo sapiens'' influenced its social organization and culture?&quot; and so forth.{{Citation needed|date=August 2011}}
+
+In the United States, contemporary anthropology is typically divided into four sub-fields: [[cultural anthropology]] also known as [[socio-cultural anthropology]], [[archaeology]], [[linguistic anthropology]], and [[Biological anthropology|physical (or biological) anthropology]].&lt;ref name=&quot;aaanet.org&quot;&gt;[http://www.aaanet.org/profdev/careers/Careers.cfm AAAnet.org]&lt;/ref&gt; The ''four-field'' approach to anthropology is reflected in many American undergraduate textbooks&lt;ref&gt;(Kottak, C)&lt;/ref&gt; and anthropology programs. At universities in the [[United Kingdom]], and much of [[Europe]], these &quot;sub-fields&quot; are frequently housed in separate departments and are seen as distinct disciplines - with the field corresponding to American socio-cultural anthropology being simply anthropology.&lt;ref&gt;Layton, Robert (1998) An Introduction to Theory in Anthropology. Cambridge: Cambridge University Press.&lt;/ref&gt;
+
+The social and cultural sub-field has been heavily influenced by [[structuralism|structuralist]] and post-modern theories, as well as a shift toward the analysis of modern societies (an arena more typically in the remit of [[sociologist]]s). During the 1970s and 1990s there was an [[epistemological]] shift away from the [[positivist]] traditions that had largely informed the discipline.&lt;ref&gt;Geertz, Behar, Clifford &amp; James&lt;/ref&gt; During this shift, enduring questions about the nature and production of knowledge came to occupy a central place in cultural and social anthropology. In contrast, archaeology and biological anthropology remained largely positivist. Due to this difference in epistemology, anthropology as a discipline has lacked cohesion over the last several decades.
+
+==Overview==
+Anthropology is traditionally divided into four sub-fields, each with its own further branches: [[Biological anthropology|biological or physical anthropology]], [[social anthropology]] or [[cultural anthropology]], [[archaeology]] and [[linguistic anthropology|anthropological linguistics]].&lt;ref name=&quot;aaanet.org&quot;/&gt; These fields frequently overlap, but tend to use different methodologies and techniques.
+
+[[Biological anthropology]], or [[physical anthropology]], focuses on the study of human population using an evolutionary framework. Biological anthropologists have theorized about how the globe has become populated with humans (e.g. the &quot;[[Out of Africa theory|Out Of Africa]]&quot; and &quot;[[Multiregional origin of modern humans|multi-regional evolution]]&quot; debate), as well as tried to explain geographical human variation and [[race (classification of human beings)|race]]. Many biological anthropologists studying modern human populations identify their field as [[human ecology]], itself linked to [[sociobiology]]. Human ecology uses evolutionary theory to understand phenomena among contemporary human populations. Another large sector of biological anthropology is [[primatology]], where anthropologists focus on understanding other primate populations. In terms of methodology, primatologists borrow heavily from field biology and ecology in their research.
+
+[[Cultural anthropology]] is also called socio-cultural anthropology or [[social anthropology]] (especially in the United Kingdom). It is the study of culture, and is based mainly on [[ethnography]]. Ethnography can refer to both a methodology and a product of research, namely a monograph or book. Ethnography is a grounded, inductive method that heavily relies on participant-observation. [[Ethnology]] involves the systematic comparison of different cultures. The process of participant-observation can be especially helpful to understanding a culture from an emic point of view, which would otherwise be unattainable by simply reading from a book. In some European countries, all cultural anthropology is known as [[ethnology]] (a term coined and defined by [[Adam František Kollár|Adam F. Kollár]] in 1783).&lt;ref&gt;Han F. Vermeulen, &quot;The German Invention of ''Völkerkunde:'' Ethnological Discourse in Europe and Asia, 1740-1798.&quot; In: Sara Eigen and Mark Larrimore, eds. ''The German Invention of Race.'' 2006.&lt;/ref&gt;
+
+The study of [[kinship]] and [[social organization]] is a central focus of cultural anthropology, as kinship is a [[human universal]]. Cultural anthropology also covers economic and political organization, law and conflict resolution, patterns of consumption and exchange, material culture, technology, infrastructure, gender relations, ethnicity, childrearing and socialization, religion, myth, symbols, values, etiquette, worldview, sports, music, nutrition, recreation, games, food, festivals, and language (which is also the object of study in linguistic anthropology).
+
+Archaeology is the study of human material culture, including both [[Artifact (archaeology)|artifacts]] (older pieces of human culture) carefully gathered ''in situ'', museum pieces and modern garbage.&lt;ref&gt;{{cite news| url=http://www.time.com/time/magazine/article/0,9171,913924,00.html | work=Time | title=The Nation: Truth in Garbage | date=26 January 1976 | accessdate=25 April 2010}}&lt;/ref&gt; Archaeologists work closely with biological anthropologists, art historians, physics laboratories (for dating), and museums. They are charged with preserving the results of their excavations and are often found in museums. In the typical scenario, archaeologists are associated with &quot;digs,&quot; or excavation of layers of ancient sites.
+
+Archaeologists subdivide time into cultural periods based on long-lasting artifacts: the [[Paleolithic]], the [[Neolithic]], the [[Bronze Age]], which are further subdivided according to artifact traditions and culture region, such as the [[Oldowan]] or the [[Gravettian]]. In this way, archaeologists provide a vast frame of reference for the places human beings have traveled, their ways of making a living, and their [[demographics]]. Archaeologists also investigate nutrition, symbolization, art, systems of writing, and other physical remnants of human cultural activity.
+
+[[Linguistic anthropology]] (also called [[anthropological linguistics]]) seeks to understand the processes of human communications, verbal and non-verbal, variation in [[language]] across time and space, the social uses of language, and the relationship between language and culture. It is the branch of anthropology that brings linguistic methods to bear on anthropological problems, linking the analysis of linguistic forms and processes to the interpretation of sociocultural processes. Linguistic anthropologists often draw on related fields including [[sociolinguistics]], [[pragmatics]], [[cognitive linguistics]], [[semiotics]], [[discourse analysis]], and [[narrative]] analysis.&lt;ref&gt;Salzmann, Zdeněk. (1993) ''Language, culture, and society: an introduction to linguistic anthropology''. Boulder, CO: Westview Press.&lt;/ref&gt;
+
+Linguistic anthropology is divided into its own sub-fields: [[descriptive linguistics]] the construction of grammars and lexicons for unstudied languages; [[historical linguistics]], including the reconstruction of past languages, from which our current languages have descended; [[ethnolinguistics]], the study of the relationship between language and culture, and [[sociolinguistics]], the study of the social functions of language. Anthropological linguistics is also concerned with the evolution of the parts of the brain that deal with language.&lt;ref&gt;[http://anthropology.net/2007/08/15/new-york-times-reviews-kenneallys-the-first-word/ Anthropology.net]&lt;/ref&gt;
+
+Because anthropology developed from so many different enterprises (see [[History of Anthropology]]), including but not limited to [[Fossil collecting|fossil-hunting]], [[Exploration|exploring]], documentary film-making, [[paleontology]], [[primatology]], antiquity dealings and curatorship, [[philology]], [[etymology]], [[genetics]], regional analysis, [[ethnology]], [[history]], [[philosophy]], and [[religious studies]],&lt;ref&gt;Erickson, Paul A. and Liam D. Murphy. ''A History of Anthropological Theory''. Broadview Press. 2003. p. 11-12&lt;/ref&gt;&lt;ref&gt;George Stocking, &quot;Paradigmatic Traditions in the History of Anthropology.&quot; In George Stocking, The Ethnographer's Magic and Other Essays in the History of Anthropology (Madison: University of Wisconsin Press, 1992):342-361.&lt;/ref&gt; it is difficult to characterize the entire field in a brief article, although attempts to write histories of the entire field have been made.&lt;ref&gt;Leaf, Murray. ''Man, Mind and Science: A History of Anthropology.'' Columbia University Press. 1979&lt;/ref&gt;
+
+Because of the holistic nature of anthropological research, all branches of anthropology have widespread practical application in diverse fields. This is known as [[applied anthropology]]. Thus military expeditions employ anthropologists to discern strategic cultural footholds; marketing professionals employ anthropology to determine propitious placement of advertising; and humanitarian agencies depend on anthropological insights as means to fight poverty. Examples of applied anthropology are ubiquitous.
+
+Focused in a positive light, Anthropology is one of the few places where humanities, social, and natural sciences are forced to confront one another. As such, anthropology has been central in the development of several new (late 20th century) interdisciplinary fields such as [[cognitive science]],&lt;ref&gt;{{cite web |title=Language, Anthropology and Cognitive Science |author=Bloch, Maurice |authorlink=Maurice Bloch |url=http://www.jstor.org/pss/2803828 |year=1991 |publisher=London School of Economics and Political Science |accessdate=27 August 2011}}&lt;/ref&gt; [[global studies]], and various [[ethnic studies]].
+
+==Basic trends==
+There are several characteristics that tend to unite anthropological work. One of the central characteristics is that anthropology tends to provide a comparatively more [[Holism|holistic]] account of phenomena and tends to be highly empirical.&lt;ref&gt;Hylland Eriksen, Thomas. (2004) &quot;What is Anthropology&quot; Pluto. London. p. 79.&lt;/ref&gt; The quest for holism leads most anthropologists to study a particular place, problem or phenomenon in detail, using a variety of methods, over a more extensive period than normal in many parts of academia.
+
+In the 1990s and 2000s, calls for clarification of what constitutes a culture, of how an observer knows where his or her own culture ends and another begins, and other crucial topics in writing anthropology were heard. It is possible to view all human cultures as part of one large, evolving global culture. These dynamic relationships, between what can be observed on the ground, as opposed to what can be observed by compiling many local observations remain fundamental in any kind of anthropology, whether cultural, biological, linguistic or archaeological.&lt;ref&gt;Rosaldo, Renato.  ''Culture and Truth: The remaking of social analysis''. Beacon Press. 1993; Inda, John Xavier and Renato Rosaldo.  ''The Anthropology of Globalization. Wiley-Blackwell. 2007''&lt;/ref&gt;
+
+Biological anthropologists are interested in both human variation&lt;ref&gt;Robert Jurmaiine, Lynn Kiilgore, Wenda Treavathan, and Russell L. Ciochon.  ''Introduction to Physical Anthropology. 11th Edition. Wadsworth. 2007, chapters I, III and IV.''; Wompack, Mari.  ''Being Human''. Prentice Hall. 2001, pp. 11-20.&lt;/ref&gt; and in the possibility of human universals (behaviors, ideas or concepts shared by virtually all human cultures)&lt;ref&gt;Brown, Donald.  ''Human Universals''. McGraw Hill. 1991; Roughley, Neil.  ''Being Humans: Anthropological Universality and Particularity in Transciplinary Perspectives''. Walter de Gruyter Publishing. 2000&lt;/ref&gt;  They use many different methods of study, but modern population [[genetics]], [[participant observation]] and other techniques often take anthropologists &quot;into the field,&quot; which means traveling to a community in its own setting, to do something called &quot;fieldwork.&quot;  On the biological or physical side, human measurements, genetic samples, nutritional data may be gathered and published as articles or monographs. Due to the interest in variation, anthropologists are drawn to the study of human extremes, aberrations and other unusual circumstances, such as [[headhunting]], [[whirling dervishes]], whether there were real [[Homo floresienses|Hobbit people]], [[snake handling]], and [[Glossolalia|glossolalia (speaking in tongues)]], just to list a few.
+
+At the same time, anthropologists urge, as part of their quest for scientific objectivity, [[cultural relativism]], which has an influence on all the sub-fields of anthropology. This is the notion that particular cultures should not be judged by one culture's values or viewpoints, but that all cultures should be viewed as relative to each other. There should be no notions, in good anthropology, of one culture being better or worse than another culture.&lt;ref&gt;Levi-Strauss, Claude.  ''The Savage Mind''. 1962; Womack, Mari.  ''Being Human.'' 2001&lt;/ref&gt;
+
+Ethical commitments in anthropology include noticing and documenting [[genocide]], [[infanticide]], [[racism]], [[mutilation]] including [[circumcision]] and [[subincision]], and [[torture]]. Topics like racism, slavery or human sacrifice, therefore, attract anthropological attention and theories ranging from nutritional deficiencies&lt;ref&gt;Harris, Marvin.  ''Cows, Pigs, Wars and Witches''.&lt;/ref&gt; to genes&lt;ref&gt;[http://www.timeshighereducation.co.uk/story.asp?storyCode=209831&amp;sectioncode=26 Timeshighereducation.co.uk]&lt;/ref&gt; to [[acculturation]] have been proposed, not to mention theories of  [[colonialism]] and many others as root causes of [[Man's inhumanity to man]]. To illustrate the depth of an anthropological approach, one can take just one of these topics, such as &quot;racism&quot; and find thousands of anthropological references, stretching across all the major and minor sub-fields.&lt;ref&gt;[http://www.aaanet.org/stmts/racepp.htm; AAAnet.org]&lt;/ref&gt;&lt;ref&gt;[http://www.sciencemag.org/cgi/content/summary/282/5389/654?maxtoshow=&amp;HITS=10&amp;hits=10&amp;RESULTFORMAT=&amp;titleabstract=DNA+challenges+race&amp;searchid=QID_NOT_SET&amp;FIRSTINDEX=; Sciencemag.org], Shanklin, Eugenia. 1994. Anthropology &amp; Race; Faye V. Harrison. 1995. &quot;The Persistent Power of 'Race' in the Cultural and Political Economy of Racism.&quot; Annual Review of Anthropology. 24:47-74. Allan Goodman. 1995. &quot;The Problematics of &quot;Race&quot; in Contemporary Biological Anthropology.&quot; In Biological Anthropology: The State of the Science.; Yearbook of Physical Anthropology, 1945-.  &quot;Melanin, Afrocentricity...,&quot; 36(1993):33-58.; see Stanford's recent collection of overarching bibliographies on race and racism, [http://library.stanford.edu/depts/ssrg/misc/race.html Library.stanford.edu]&lt;/ref&gt;
+
+Along with dividing up their project by theoretical emphasis, anthropologists typically divide the world up into relevant time periods and geographic regions. Human time on Earth is divided up into relevant cultural traditions based on material, such as the [[Paleolithic]] and the [[Neolithic]], of particular use in archaeology. Further cultural subdivisions according to tool types, such as [[Olduwan]] or [[Mousterian]] or [[Levallois technique|Levalloisian]] help archaeologists and other anthropologists in understanding major trends in the human past. Anthropologists and geographers share approaches to [[Culture regions]] as well, since mapping cultures is central to both sciences. By making comparisons across cultural traditions (time-based) and cultural regions (space-based), anthropologists have developed various kinds of [[comparative method]], a central part of their science.
+
+Contemporary anthropology is an established science with academic departments at most universities and colleges. The single largest organization of Anthropologists is the [[American Anthropological Association]], which was founded in 1903.&lt;ref&gt;[http://www.aaanet.org/about/ AAAnet.org]&lt;/ref&gt; Membership is made up of Anthropologists from around the globe.&lt;ref&gt;[http://www.aaanet.org/membership/upload/MAY-08-AAA.pdf AAAnet.org]&lt;/ref&gt;  Hundreds of other organizations exist in the various sub-fields of anthropology, sometimes divided up by nation or region, and many anthropologists work with collaborators in other disciplines, such as [[geology]], [[physics]], [[zoology]], [[paleontology]], [[anatomy]], [[music theory]], [[art history]], [[sociology]] and so on, belonging to professional societies in those disciplines as well.&lt;ref&gt;Johanson, Donald and Kate Wong. ''Lucy's Legacy''. Kindle Books. 2007; Netti, Bruno. ''The study of ethnomusicology.''  University of Illinois Press. 2005. Chapter One&lt;/ref&gt;
+
+==History==
+{{Main|History of anthropology}}
+The first use of the term &quot;anthropology&quot; in English to refer to a natural science of humanity was apparently in 1593, the first of the &quot;[[-logy|logies]]&quot; to be coined.&lt;ref&gt;Urbanowicz, Charles. In the Newsletter of the American Anthropological Association, reprinted online, [http://www.csuchico.edu/~curbanowicz/Pub_Papers/4field.html Csuchico.edu]&lt;/ref&gt; It took [[Immanuel Kant]] 25 years to write one of the first major treatises on anthropology, his ''Anthropology from a Pragmatic Point of View''.&lt;ref&gt;Foucault, Michel.  &quot;Introduction&quot; to his 1961 translation of Kant's work, reprinted, [http://www.generation-online.org/p/fpfoucault1.htm Generation-online.org]&lt;/ref&gt;  Kant is not generally considered to be a modern anthropologist, however, as he never left his region of Germany nor did he study any cultures besides his own, and in fact, describes the need for anthropology as a corollary field to his own primary field of philosophy.&lt;ref&gt;Jacobs, Brian, and Kain, Patrick (eds.), Essays on Kant's Anthropology, Cambridge University Press, 2003, 278pp., ISBN 0521790387.&lt;/ref&gt;  He did, however, begin teaching an annual course in anthropology in 1772. Anthropology is thus primarily an [[Age of Enlightenment|Enlightenment]] and post-[[Age of Enlightenment|Enlightenment]] endeavor.
+
+Historians of anthropology, like Marvin Harris,&lt;ref&gt;Harris, Marvin.  ''The Rise of Anthropological Theory.''  Alta Mira Press. 2000 (revised from 1968); Harris, Marvin.  ''Theories of Culture in Postmodern Times. Altamira. 1998''&lt;/ref&gt; indicate two major frameworks within which empirical anthropology has arisen: interest in comparisons of people over space and interest in longterm human processes or humans as viewed through time. Harris dates both to [[Classical Greece]] and [[Classical Rome]], specifically [[Herodotus]], often called the &quot;father of history&quot; and the [[Ancient Rome|Roman]] historian [[Tacitus]], who wrote many of our only surviving contemporary accounts of several ancient [[Celts|Celtic]] and [[Germanic peoples]]. Herodotus first formulated some of the persisting problems of anthropology.&lt;ref&gt;Harris, 1968, op cit. pp. 8-52; Leaf 1970, op cit. pp. 1-13; Erickson and Murph, 2003, pp. 21-25&lt;/ref&gt;
+
+Medieval scholars may be considered forerunners of modern anthropology as well, insofar as they conducted or wrote detailed studies of the customs of peoples considered &quot;different&quot; from themselves in terms of geography.  [[John of Plano Carpini]] reported of his stay among the [[Mongols]]. His report was unusual in its detailed depiction of a non-European culture&lt;ref&gt;[http://www.timothyjpmason.com/WebPages/Publications/Source_pages/AnthroHist.htm Resources for a History of Anthropology]&lt;/ref&gt;
+
+[[Marco Polo]]'s systematic observations of nature, anthropology, and geography are another example of studying human variation across space.&lt;ref&gt;[http://www.tk421.net/essays/polo.html Marco Polo's Asia]&lt;/ref&gt; Polo's travels took him across such a diverse human landscape and his accounts of the peoples he met as he journeyed were so detailed that they earned for Polo the name &quot;the father of modern anthropology.&quot;&lt;ref&gt;[http://www.aaanet.org/sections/gad/history/011rowe.pdf The Renaissance Foundations of Anthropology]&lt;/ref&gt;
+
+Another candidate for one of the first scholars to carry out comparative ethnographic-type studies in person was the medieval [[Persian people|Persian]] scholar [[Abū Rayhān Bīrūnī]] in the 11th century, who wrote about the peoples, customs, and religions of the [[Indian subcontinent]]. Like modern anthropologists, he engaged in extensive [[participant observation]] with a given group of people, learnt their language and studied their primary texts, and presented his findings with [[objectivity (science)|objectivity]] and [[Neutrality (philosophy)|neutrality]] using [[Cross-cultural studies|cross-cultural comparisons]].&lt;ref name=Ahmed&gt;{{Cite journal | last1 = Ahmed | first1 = Akbar S. | year = 1984 | title = Al-Beruni: The First Anthropologist | url = | journal = RAIN | volume = 60 | issue = | pages = 9–10 }}&lt;/ref&gt; However, others argue that he can hardly be considered an anthropologist in the conventional sense.&lt;ref&gt;Richard Tapper (1995). &quot;Islamic Anthropology&quot; and the &quot;Anthropology of Islam&quot;, ''Anthropological Quarterly'' '''68''' (3), Anthropological Analysis and Islamic Texts, p. 185-193.&lt;/ref&gt; He wrote detailed comparative studies on the religions and cultures in the [[Middle East]], [[Mediterranean Basin|Mediterranean]] and especially [[South Asia]].&lt;ref&gt;{{Cite journal | doi = 10.1353/jhi.1998.0030 | last1 = Walbridge | first1 = J. T. | year = 1998 | title = Explaining Away the Greek Gods in Islam | url = | journal = Journal of the History of Ideas | volume = 59 | issue = 3| pages = 389–403 }}&lt;/ref&gt;&lt;ref&gt;Richard Tapper (1995). &quot;Islamic Anthropology&quot; and the &quot;Anthropology of Islam&quot;, ''Anthropological Quarterly'' 68 (3), Anthropological Analysis and Islamic Texts, p. 185-193.&lt;/ref&gt; Biruni's tradition of comparative cross-cultural study continued in the [[Muslim world]] through to [[Ibn Khaldun]]'s work in the 14th century.&lt;ref name=Ahmed/&gt;&lt;ref&gt;[http://www.colorq.org/Articles/article.aspx?d=2002&amp;x=arabviews West Asian views on black Africans during the medieval era]&lt;/ref&gt;
+
+Most scholars{{Citation needed|date=April 2009}} consider modern anthropology as an outgrowth of the [[Age of Enlightenment]], a period when Europeans attempted systematically to study human behavior, the known varieties of which had been increasing since the 15th century as a result of the [[first European colonization wave (15th century–19th century)|first European colonization wave]]. The traditions of [[jurisprudence]], [[history]], [[philology]], and [[sociology]] then evolved into something more closely resembling the modern views of these disciplines and informed the development of the [[social sciences]], of which anthropology was a part.
+
+Developments in the systematic study of ancient civilizations through the disciplines of [[Classics]] and [[Egyptology]] informed both archaeology and eventually social anthropology, as did the study of East and South Asian languages and cultures. At the same time, the [[Romanticism|Romantic]] reaction to the Enlightenment produced thinkers, such as [[Johann Gottfried Herder]] and later [[Wilhelm Dilthey]], whose work formed the basis for the &quot;culture concept,&quot; which is central to the discipline.
+[[File:Table of Natural History, Cyclopaedia, Volume 2.jpg|thumb|right|200px|Table of natural history, 1728 ''[[Cyclopaedia, or an Universal Dictionary of Arts and Sciences|Cyclopaedia]]'']]
+
+Institutionally, anthropology emerged from the development of [[natural history]] (expounded by authors such as [[Georges-Louis Leclerc, Comte de Buffon|Buffon]]) that occurred during the European colonization of the 17th, 18th, 19th and 20th centuries. Programs of ethnographic study originated in this era as the study of the &quot;human primitives&quot; overseen by colonial administrations.
+
+There was a tendency in late 18th century Enlightenment thought to understand human society as natural phenomena that behaved according to certain principles and that could be observed empirically. In some ways, studying the language, culture, physiology, and artifacts of European colonies was not unlike studying the flora and fauna of those places.
+
+Early anthropology was divided between proponents of [[unilineal evolution|unilinealism]], who argued that all societies passed through a single evolutionary process, from the most primitive to the most advanced, and various forms of non-lineal theorists, who tended to subscribe to ideas such as [[diffusionism]].&lt;ref&gt;Stocking, George W. (1968) Race, Culture, and Evolution: Essays in the history of anthropology. London: The Free Press.&lt;/ref&gt; Most 19th-century social theorists, including anthropologists, viewed non-European societies as windows onto the pre-industrial human past.
+
+As academic disciplines began to differentiate over the course of the 19th century, anthropology grew increasingly distinct from the biological approach of natural history, on the one hand, and from purely historical or literary fields such as Classics, on the other. A common criticism has been that many social science scholars (such as economists, sociologists, and psychologists) in Western countries focus disproportionately on Western subjects, while anthropology focuses disproportionately on the &quot;Other&quot;;&lt;ref&gt;Clifford, James and George E. Marcus (1986) Writing culture: the poetics and politics of ethnography. Berkeley: University of California Press.&lt;/ref&gt; this has changed over the last part of the 20th century as anthropologists increasingly also study Western subjects, particularly variation across class, region, or ethnicity within Western societies, and other social scientists increasingly take a global view of their fields.
+
+===20th century===
+In the 20th century, academic disciplines have often been institutionally divided into three broad domains. The natural and biological ''[[sciences]]'' seek to derive general laws through reproducible and verifiable experiments. The ''[[humanities]]'' generally study local traditions, through their [[history]], [[literature]], [[music]], and [[art]]s, with an emphasis on understanding particular individuals, events, or eras.
+
+The ''[[social sciences]]'' have generally attempted to develop [[scientific method]]s to understand social phenomena in a generalizable way, though usually with methods distinct from those of the natural sciences. In particular, social sciences often develop [[statistics|statistical]] descriptions rather than the general laws derived in [[physics]] or [[chemistry]], or they may explain individual cases through more general principles, as in many fields of [[psychology]]. Anthropology (like some fields of [[history]]) does not easily fit into one of these categories, and different branches of anthropology draw on one or more of these domains.&lt;ref&gt;{{Cite journal | doi = 10.1086/375868 | last1 = Wallerstein | first1 = Immanuel | year = 2003 | title = Anthropology, sociology, and other dubious disciplines | url = | journal = Current Anthropology | volume = 44 | issue = | pages = 453–466 }}&lt;/ref&gt;
+
+Anthropology as it emerged amongst the Western colonial powers (mentioned above) has generally taken a different path than that in the countries of southern and central Europe ([[Italy]], [[Greece]], and the successors to the [[Austro-Hungarian]] and [[Ottoman empire]]s). In the former, the encounter with multiple, distinct cultures, often very different in organization and language from those of Europe, has led to a continuing emphasis on [[cross-cultural comparison]] and a receptiveness to certain kinds of cultural relativism.&lt;ref&gt;On varieties of cultural relativism in anthropology, see Spiro, Melford E. (1987) &quot;Some Reflections on Cultural Determinism and Relativism with Special Reference to Emotion and Reason,&quot; in ''Culture and Human Nature: theoretical papers of Melford E. Spiro''. Edited by B. Kilborne and L. L. Langness, pp. 32-58. Chicago: University of Chicago Press.&lt;/ref&gt;
+
+In the successor states of continental Europe, on the other hand, anthropologists often joined with folklorists and linguists in building nationalist perspectives. Ethnologists in these countries tended to focus on differentiating among local ethnolinguistic groups, documenting local folk culture, and representing the prehistory of what has become a nation through various forms of public education (eg, museums of several kinds).&lt;ref&gt;Gellner, Ernest. (1998) ''Language and solitude: Wittgenstein, Malinowski, and the Habsburg dilemma''. New York: Cambridge University Press.&lt;/ref&gt;
+
+In this scheme, Russia occupied a middle position. On the one hand, it had a large region (largely east of the Urals) of highly distinct, pre-industrial, often non-literate peoples, similar to the situation in the Americas. On the other hand, Russia also participated to some degree in the nationalist (cultural and political) movements of Central and Eastern Europe. After the Revolution of 1917, anthropology in the USSR, and later the Soviet Bloc countries, were highly shaped by the requirement to conform to Marxist theories of social evolution.&lt;ref&gt;Gellner, Ernest, ed. (1980) ''Soviet and Western anthropology''. New York: Columbia University Press.&lt;/ref&gt;
+
+==Countries==
+===Britain===
+[[File:Edward Burnett Tylor.jpg|thumb|right|[[E. B. Tylor]], 19th-century British anthropologist.]]
+[[Edward Burnett Tylor|E. B. Tylor]] ( 2 October 1832 – 2 January 1917) and [[James Frazer|James George Frazer]] ( 1 January 1854 – 7 May 1941) are generally considered the antecedents to modern [[social anthropology]] in Britain. Though Tylor undertook a field trip to [[Mexico]], both he and Frazer derived most of the material for their comparative studies through extensive reading, not fieldwork, mainly the Classics (literature and history of Greece and Rome), the work of the early European folklorists, and reports from missionaries, travelers, and contemporaneous ethnologists.
+
+Tylor advocated strongly for unilinealism and a form of &quot;uniformity of mankind&quot;.&lt;ref&gt;[http://www.aaanet.org/gad/history/044stocking.pdf Stocking, George Jr. (1963) &quot;Matthew Arnold, E. B. Tylor, and the Uses of Invention,&quot; ''American Anthropologist'', 65:783-799, 1963]&lt;/ref&gt; Tylor in particular laid the groundwork for theories of [[cultural diffusionism]], stating that there are three ways that different groups can have similar cultural forms or technologies: &quot;independent invention, inheritance from ancestors in a distant region, transmission from one race [sic] to another.&quot;&lt;ref&gt;Tylor, E. B. (1865) ''Researches into the early history of mankind the development of civilization.'' London: John Murray.&lt;/ref&gt;
+
+Tylor formulated one of the early and influential anthropological conceptions of [[culture]] as &quot;that complex whole, which includes knowledge, belief, art, morals, law, custom, and any other capabilities and habits acquired by man as a member of society.&quot;&lt;ref&gt;Tylor, E. B. (1871) ''Primitive culture: researches into the development of mythology, philosophy, religion, art, and custom''. 2 vols. London, John Murray.&lt;/ref&gt; However, as Stocking notes, Tylor mainly concerned himself with describing and mapping the distribution of particular elements of culture, rather than with the larger function, and generally seemed to assume a Victorian idea of progress rather than the idea of non-directional, multilineal cultural development proposed by later anthropologists.
+
+Tylor also theorized about the origins of religious feelings in human beings, proposing a theory of [[animism]] as the earliest stage, and noting that &quot;religion&quot; has many components, of which he believed the most important to be belief in supernatural beings (as opposed to moral systems, cosmology, etc.). Frazer, a Scottish scholar with a broad knowledge of Classics, also concerned himself with religion, myth, and magic. His comparative studies, most influentially in the numerous editions of ''[[The Golden Bough]]'', analyzed similarities in religious belief and symbolism globally.
+
+Neither Tylor nor Frazer, however, was particularly interested in [[fieldwork]], nor were they interested in examining how the cultural elements and institutions fit together. Toward the turn of the 20th century, a number of anthropologists became dissatisfied with this categorization of cultural elements; historical reconstructions also came to seem increasingly speculative.
+
+Under the influence of several younger scholars, a new approach came to predominate among British anthropologists, concerned with analyzing how societies held together in the present ([[wikt:synchronic|synchronic]] analysis, rather than [[wikt:diachronic|diachronic]] or historical analysis), and emphasizing long-term (one to several years) immersion fieldwork. [[Cambridge University]] financed a [[William Rivers#Torres Straits Expedition|multidisciplinary expedition]] to the [[Torres Strait Islands]] in 1898, organized by [[Alfred Court Haddon]] and including a physician-anthropologist, [[William Rivers]], as well as a linguist, a botanist, other specialists. The findings of the expedition set new standards for ethnographic description.
+
+A decade and a half later, Polish anthropology student [[Bronisław Malinowski]] (1884–1942) was beginning what he expected to be a brief period of [[fieldwork]] in the old model, collecting lists of cultural items, when the outbreak of the First World War stranded him in [[New Guinea]]. As a subject of the Austro-Hungarian Empire resident on a British colonial possession, he was effectively confined to New Guinea for several years.&lt;ref&gt;Malinowski, Bronisław (1967) ''A diary in the strict sense of the term''. New York, Harcourt, Brace &amp; World [1967]&lt;/ref&gt;
+
+He made use of the time by undertaking far more intensive fieldwork than had been done by ''British'' anthropologists, and his classic ethnography, ''[[Argonauts of the Western Pacific]]'' (1922) advocated an approach to [[fieldwork]] that became standard in the field: getting &quot;the native's point of view&quot; through [[participant observation]]. Theoretically, he advocated a [[Functionalism (sociology)|functionalist]] interpretation, which examined how social institutions functioned to satisfy individual needs.
+
+British social anthropology had an expansive moment in the [[Interwar period]], with key contributions coming from the Polish-British [[Bronisław Malinowski]] and [[Meyer Fortes]]&lt;ref&gt;[[Jack Goody]] (1995) ''[http://www3.cambridge.org/us/catalogue/catalogue.asp?isbn=0521450489 The Expansive Moment: The Rise of Social Anthropology in Britain and Africa, 1918-1970]'' review at [http://links.jstor.org/sici?sici=0094-0496(199702)24%3A1%3C211%3ATEMTRO%3E2.0.CO%3B2-I Links.jstor.org]&lt;/ref&gt;
+
+[[A. R. Radcliffe-Brown]] also published a seminal work in 1922. He had carried out his initial fieldwork in the [[Andaman Islands]] in the old style of historical reconstruction. However, after reading the work of French sociologists [[Émile Durkheim]] and [[Marcel Mauss]], Radcliffe-Brown published an account of his research (entitled simply ''The Andaman Islanders'') that paid close attention to the meaning and purpose of rituals and myths. Over time, he developed an approach known as [[structural functionalism|structural-functionalism]], which focused on how institutions in societies worked to balance out or create an equilibrium in the social system to keep it functioning harmoniously. (This contrasted with Malinowski's functionalism, and was quite different from the later French [[Structuralism#Structuralism in anthropology and sociology|structuralism]], which examined the conceptual structures in language and symbolism.)
+
+Malinowski and Radcliffe-Brown's influence stemmed from the fact that they, like Boas, actively trained students and aggressively built up institutions that furthered their programmatic ambitions. This was particularly the case with Radcliffe-Brown, who spread his agenda for &quot;Social Anthropology&quot; by teaching at universities across the [[Commonwealth of Nations|British Commonwealth]]. From the late 1930s until the postwar period appeared a string of monographs and edited volumes that cemented the paradigm of British Social Anthropology (BSA). Famous ethnographies include ''The Nuer,'' by [[Edward Evan Evans-Pritchard]], and ''The Dynamics of Clanship Among the Tallensi,'' by [[Meyer Fortes]]; well-known edited volumes include ''African Systems of Kinship and Marriage'' and ''African Political Systems.''
+
+[[Max Gluckman]], together with many of his colleagues at the [[Rhodes-Livingstone Institute]] and students at [[Manchester University]], collectively known as the [[Manchester School (anthropology)|Manchester School]], took BSA in new directions through their introduction of explicitly Marxist-informed theory, their emphasis on conflicts and conflict resolution, and their attention to the ways in which individuals negotiate and make use of the social structural possibilities.
+
+In Britain, anthropology had a great intellectual impact, it &quot;contributed to the erosion of [[Christianity]], the growth of [[cultural relativism]], an awareness of the survival of the primitive in modern life, and the replacement of [[wikt:diachronic|diachronic]] modes of analysis with [[wikt:synchronic|synchronic]], all of which are central to modern culture.&quot;&lt;ref&gt;Thomas William Heyck at [http://links.jstor.org/sici?sici=0002-8762%28199712%29102%3A5%3C1486%3AATBSA1%3E2.0.CO%3B2-7 Links.jstor.org] The American Historical Review, Vol. 102, No. 5 (December, 1997), pp. 1486-1488 doi:10.2307/2171126&lt;/ref&gt;
+
+Later in the 1960s and 1970s, [[Edmund Leach]] and his students [[Mary Douglas]] and [[Nur Yalman]], among others, introduced French structuralism in the style of [[Claude Lévi-Strauss|Lévi-Strauss]]; while British anthropology has continued to emphasize social organization and economics over purely symbolic or literary topics, differences among British, French, and American sociocultural anthropologies have diminished with increasing dialogue and borrowing of both theory and methods. Today, social anthropology in Britain engages internationally with many other social theories and has branched in many directions.
+
+In countries of the British Commonwealth, social anthropology has often been institutionally separate from [[physical anthropology]] and [[primatology]], which may be connected with departments of biology or zoology; and from archaeology, which may be connected with departments of [[Classics]], [[Egyptology]], and the like. In other countries (and in some, particularly smaller, British and North American universities), anthropologists have also found themselves institutionally linked with scholars of [[folklore]], [[Museology|museum studies]], [[human geography]], [[sociology]], [[social relations]], [[ethnic studies]], [[cultural studies]], and [[social work]].
+
+Anthropology has been used in Britain to provide an alternative explanation for the [[Financial crisis of 2007–2010]] to the technical explanations rooted in economic and political theory. Dr. [[Gillian Tett]], a [[Cambridge University]] trained anthropologist who went on to become a senior editor at the [[Financial Times]] is one of the leaders in this use of anthropology.
+
+===United States===
+====19th Century to 1940s====
+From its beginnings in the early 19th century through the early 20th century, anthropology in the United States was influenced by the presence of [[Native Americans in the United States|Native American]] societies.
+
+[[File:FranzBoas.jpg|thumb|right|[[Franz Boas]], one of the pioneers of modern anthropology, often called the &quot;Father of American Anthropology&quot;]]
+[[Cultural anthropology]] in the United States was influenced greatly by the ready availability of Native American societies as ethnographic subjects. The field was pioneered by staff of the [[Bureau of Indian Affairs]] and the Smithsonian Institution's [[Bureau of American Ethnology]], men such as [[John Wesley Powell]] and [[Frank Hamilton Cushing]].
+
+[[Lewis Henry Morgan]] (1818–1881), a lawyer from [[Rochester, New York|Rochester]], [[New York]], became an advocate for and ethnological scholar of the [[Iroquois]]. His comparative analyses of religion, government, material culture, and especially kinship patterns proved to be influential contributions to the field of anthropology. Like other scholars of his day (such as [[Edward Tylor]]), Morgan argued that human societies could be classified into categories of cultural evolution on a scale of progression that ranged from ''savagery'', to ''barbarism'', to ''civilization''. Generally, Morgan used technology (such as bowmaking or pottery) as an indicator of position on this scale.
+
+====Boasian anthropology====
+[[Franz Boas]] established academic anthropology in the United States in opposition to this sort of evolutionary perspective. His approach was empirical, skeptical of overgeneralizations, and eschewed attempts to establish universal laws. For example, Boas studied immigrant children to demonstrate that biological race was not immutable, and that human conduct and behavior resulted from nurture, rather than nature.
+
+Influenced by the German tradition, Boas argued that the world was full of distinct ''cultures,'' rather than societies whose evolution could be measured by how much or how little &quot;civilization&quot; they had. He believed that each culture has to be studied in its particularity, and argued that cross-cultural generalizations, like those made in the [[natural science]]s, were not possible.
+
+In doing so, he fought discrimination against immigrants, blacks, and indigenous peoples of the Americas.&lt;ref&gt;Stocking, George W. (1968) ''Race, Culture, and Evolution: Essays in the history of anthropology''. London: The Free Press.&lt;/ref&gt; Many American anthropologists adopted his agenda for social reform, and theories of race continue to be popular subjects for anthropologists today. The so-called &quot;Four Field Approach&quot; has its origins in Boasian Anthropology, dividing the discipline in the four crucial and interrelated fields of sociocultural, biological, linguistic, and archaic anthropology (e.g. archaeology). Anthropology in the United States continues to be deeply influenced by the Boasian tradition, especially its emphasis on culture.
+[[File:Ruth Benedict.jpg|thumb|[[Ruth Benedict]] in 1937]]
+
+Boas used his positions at [[Columbia University]] and the [[American Museum of Natural History]] to train and develop multiple generations of students. His first generation of students included [[Alfred Kroeber]], [[Robert Lowie]], [[Edward Sapir]] and [[Ruth Benedict]], who each produced richly detailed studies of indigenous North American cultures. They provided a wealth of details used to attack the theory of a single evolutionary process. Kroeber and Sapir's focus on Native American languages helped establish [[linguistics]] as a truly general science and free it from its historical focus on [[Indo-European languages]].
+
+The publication of [[Alfred Kroeber]]'s textbook, ''Anthropology,'' marked a turning point in American anthropology. After three decades of amassing material, Boasians felt a growing urge to generalize. This was most obvious in the 'Culture and Personality' studies carried out by younger Boasians such as [[Margaret Mead]] and [[Ruth Benedict]]. Influenced by psychoanalytic psychologists including [[Sigmund Freud]] and [[Carl Jung]], these authors sought to understand the way that individual personalities were shaped by the wider cultural and social forces in which they grew up.
+
+Though such works as ''[[Coming of Age in Samoa]]'' and ''[[The Chrysanthemum and the Sword]]'' remain popular with the American public, Mead and Benedict never had the impact on the discipline of anthropology that some expected. Boas had planned for Ruth Benedict to succeed him as chair of Columbia's anthropology department, but she was sidelined by [[Ralph Linton]], and Mead was limited to her offices at the [[American Museum of Natural History|AMNH]].
+
+===Canada===
+Canadian anthropology began, as in other parts of the Colonial world, as ethnological data in the records of travellers and missionaries. In Canada, [[Jesuit]] [[Missionary|missionaries]] such as Fathers LeClercq, Le Jeune and Sagard, in the 17th century, provide the oldest ethnographic records of native tribes in what was then the Domain of Canada.
+
+True anthropology began with a [[Government agency|Government department]]: the [[Geological Survey of Canada]], and [[George Mercer Dawson]] (director in 1895). Dawson's support for anthropology created impetus for the profession in Canada. This was expanded upon by Prime Minister Wilfrid Laurier, who established a Division of Anthropology within the Geological Survey in 1910. Anthropologists were recruited from England and the USA, setting the foundation for the unique Canadian style of anthropology. Scholars include the linguist and Boasian [[Edward Sapir]].
+
+===France===
+[[File:Emile Durkheim.jpg|thumb|[[Émile Durkheim]]]]
+Anthropology in France has a less clear genealogy than the British and American traditions, in part because many French writers influential in anthropology have been trained or held faculty positions in sociology, philosophy, or other fields rather than in anthropology.
+
+Most commentators consider [[Marcel Mauss]] (1872–1950), nephew of the influential sociologist [[Émile Durkheim]], to be the founder of the French anthropological tradition. Mauss belonged to Durkheim's ''[[Année Sociologique]]'' group.  While Durkheim and others examined the state of modern societies, Mauss and his collaborators (such as [[Henri Hubert]] and [[Robert Hertz]]) drew on ethnography and philology to analyze societies that were not as 'differentiated' as European nation states.
+
+Two works by Mauss in particular proved to have enduring relevance: ''[[The Gift (book)|Essay on the Gift]],'' a seminal analysis of [[trade|exchange]] and [[reciprocity (cultural anthropology)|reciprocity]], and his Huxley lecture on the notion of the person, the first comparative study of notions of person and selfhood cross-culturally.&lt;ref&gt;Mauss, Marcel (1938) &quot;A category of the human mind: the notion of person; the notion of self.,&quot; in M. Carrithers, S. Collins, and S. Lukes, eds. ''The Category of the Person: anthropology, philosophy, history''. Pp. 1-25. Cambridge/New York: Cambridge University Press. Originally given as &quot;Une categorie de l'Esprit Humain: La Notion de Personne, Celle de 'Moi',&quot; for the Huxley Memorial Lecture and appeared in the ''Journal of the Royal Anthropological Institute'', 68.&lt;/ref&gt;
+
+Throughout the interwar years, French interest in anthropology often dovetailed with wider cultural movements such as [[surrealism]] and [[primitivism (art movement)|primitivism]], which drew on ethnography for inspiration. [[Marcel Griaule]] and [[Michel Leiris]] are examples of people who combined anthropology with the French avant-garde. During this time most of what is known as ''ethnologie'' was restricted to museums, such as the [[Musée de l'Homme]] founded by [[Paul Rivet]], and anthropology had a close relationship with studies of [[folklore]].
+
+Above all, [[Claude Lévi-Strauss]] helped institutionalize anthropology in France. Along with the enormous influence that his theory of [[structuralism]] exerted across multiple disciplines, Lévi-Strauss established ties with American and British anthropologists. At the same time, he established centers and laboratories within France to provide an institutional context within anthropology, while training influential students such as [[Maurice Godelier]] and [[Françoise Héritier]].  They proved influential in the world of French anthropology. Much of the distinct character of France's anthropology today is a result of the fact that most anthropology is carried out in nationally funded research laboratories ([[Centre national de la recherche scientifique|CNRS]]) rather than academic departments in universities.
+
+Other influential writers in the 1970s include [[Pierre Clastres]], who explains in his books on the [[Guayaki]] tribe in [[Paraguay]] that &quot;primitive societies&quot; actively oppose the institution of the [[state (polity)|state]]. These stateless societies are not less evolved than societies with states, but chose to conjure the institution of [[authority]] as a separate function from society. The [[Leadership|leader]] is only a spokesperson for the group when it has to deal with other groups (&quot;international relations&quot;) but has no inside authority, and may be violently removed if he attempts to abuse this position.&lt;ref&gt;Bartholomew Dean “Critical Re-vision: Clastres' Chronicle and the optic of [[primitivism]]”, 2002 In ''Best of Anthropology Today, 1974-2000'', ed. J. Benthall, with a preface by M. Sahlins. London: Routledge. [http://www.amazon.com/gp/reader/0415262550 Amazon.com]&lt;/ref&gt;
+
+The most important French social theorist since [[Michel Foucault|Foucault]] and Lévi-Strauss is [[Pierre Bourdieu]], who trained formally in philosophy and sociology and eventually held the Chair of Sociology at the Collège de France. Like Mauss and others before him, he worked on topics both in sociology and anthropology. His fieldwork among the [[Kabyle people|Kabyle]] of Algeria places him solidly in anthropology, while his analysis of the function and reproduction of fashion and cultural capital in European societies places him as solidly in sociology.
+
+===Other countries===
+Anthropology in [[Greece]] and [[Portugal]] is much influenced by British anthropology.{{Citation needed|date=February 2008}} In [[Greece]], there was since the 19th century a science of the [[folklore]] called ''laographia'' (laography), in the form of &quot;a science of the interior&quot;, although theoretically weak; but the connotation of the field deeply changed after World War II, when a wave of Anglo-American anthropologists introduced a science &quot;of the outside&quot;.&lt;ref&gt;Geneviève Zoïa, « L'anthropologie en Grèce », Terrain, Numéro 14—L'incroyable et ses preuves (mars 1990) , [En ligne], mis en ligne le 7 octobre 2005,  [http://terrain.revues.org/document3641.html Terrain.revues.org], Consulté le 15 juin 2007. {{fr icon}}&lt;/ref&gt; In [[Italy]], the development of [[ethnology]] and related studies did not receive as much attention as other branches of learning.&lt;ref&gt;Grottanelli, Vinigi ''[http://links.jstor.org/sici?sici=0011-3204(197712)18%3A4%3C593%3AEACAII%3E2.0.CO%3B2-Z Ethnology and/or Cultural Anthropology in Italy: Traditions and Developments (and Comments and Reply)]''. Other authors: Giorgio Ausenda, Bernardo Bernardi, Ugo Bianchi, Y. Michal Bodemann, Jack Goody, Allison Jablonko, David I. Kertzer, Vittorio Lanternari, Antonio Marazzi, Roy A. Miller, Jr., Laura Laurencich Minelli, David M. Moss, Leonard W. Moss, H. R. H. Prince Peter of Greece and Denmark, Diana Pinto, Pietro Scotti, Tullio Tentori. ''[[Current Anthropology]]'', Vol. 18, No. 4 (December, 1977), pp. 593-614&lt;/ref&gt;
+
+[[Germany]] and [[Norway]] are the countries that showed the most division and conflict between scholars focusing on domestic socio-cultural issues and scholars focusing on &quot;other&quot; societies.{{Citation needed|date=February 2008}}
+
+==Post–World War II==
+Before [[World War II|WWII]] British 'social anthropology' and American 'cultural anthropology' were still distinct traditions. After the war, enough British and American anthropologists borrowed ideas and methodological approaches from one another that some began to speak of them collectively as 'sociocultural' anthropology.
+
+In the 1950s and mid-1960s anthropology tended increasingly to model itself after the [[natural science]]s. Some anthropologists, such as [[Lloyd Fallers]] and [[Clifford Geertz]], focused on processes of modernization by which newly independent states could develop. Others, such as [[Julian Steward]] and [[Leslie White]], focused on how societies evolve and fit their ecological niche—an approach popularized by [[Marvin Harris]].
+
+[[Economic anthropology]] as influenced by [[Karl Polanyi]] and practiced by [[Marshall Sahlins]] and [[George Dalton]] challenged standard neoclassical [[economics]] to take account of cultural and social factors, and employed Marxian analysis into anthropological study. In England, British Social Anthropology's paradigm began to fragment as [[Max Gluckman]] and [[Peter Worsley]] experimented with Marxism and authors such as [[Rodney Needham]] and [[Edmund Leach]] incorporated Lévi-Strauss's structuralism into their work.
+
+Structuralism also influenced a number of developments in 1960s and 1970s, including [[Psychological anthropology#Cognitive Anthropology|cognitive anthropology]] and componential analysis. Authors such as [[David Schneider (anthropologist)|David Schneider]], [[Clifford Geertz]], and [[Marshall Sahlins]] developed a more fleshed-out concept of culture as a web of meaning or signification, which proved very popular within and beyond the discipline. In keeping with the times, much of anthropology became politicized through the [[Algerian War of Independence]] and opposition to the [[Vietnam War]];&lt;ref&gt;Fanon, Frantz. (1963) The Wretched of the Earth, transl. Constance Farrington. New York, Grove Weidenfeld.&lt;/ref&gt; [[Marxism]] became an increasingly popular theoretical approach in the discipline.&lt;ref&gt;Nugent, Stephen ''[http://www.ingentaconnect.com/search/article?title=anthropology&amp;title_type=tka&amp;year_from=1998&amp;year_to=2007&amp;database=1&amp;pageSize=20&amp;index=4 Some reflections on anthropological structural Marxism]'' The Journal of the Royal Anthropological Institute, Volume 13, Number 2, June 2007, pp. 419-431(13)&lt;/ref&gt; By the 1970s the authors of volumes such as ''Reinventing Anthropology'' worried about anthropology's relevance.
+
+Since the 1980s issues of power, such as those examined in [[Eric Wolf]]'s ''[[Europe and the People Without History]]'', have been central to the discipline. In the 80s books like ''Anthropology and the Colonial Encounter'' pondered anthropology's ties to colonial inequality, while the immense popularity of theorists such as [[Antonio Gramsci]] and [[Michel Foucault]] moved issues of power and [[hegemony]] into the spotlight. Gender and sexuality became popular topics, as did the relationship between history and anthropology, influenced by [[Marshall Sahlins]] (again), who drew on [[Claude Lévi-Strauss|Lévi-Strauss]] and [[Fernand Braudel]] to examine the relationship between social structure and individual agency. Also influential in these issues were [[Nietzsche]], [[Heidegger]], the critical theory of the [[Frankfurt School]], [[Derrida]] and [[Lacan]].&lt;ref name=&quot;Lewis&quot;&gt;Lewis, Herbert S. (1998) ''[http://links.jstor.org/sici?sici=0002-7294(199809)2%3A100%3A3%3C716%3ATMOAAI%3E2.0.CO%3B2-3 The Misrepresentation of Anthropology and its Consequences]'' ''[[American Anthropologist]]'' 100:&quot; 716-731&lt;/ref&gt;
+
+In the late 1980s and 1990s authors such as [[George Marcus]] and [[James Clifford]] pondered ethnographic authority, in particular how and why anthropological knowledge was possible and authoritative. They were reflecting trends in research and discourse initiated by Feminists in the academy, although they excused themselves from commenting specifically on those pioneering critics.&lt;ref&gt;Clifford, James and George E. Marcus (1986) ''Writing culture: the poetics and politics of ethnography''. Berkeley: University of California Press.&lt;/ref&gt; Nevertheless, key aspects of feminist theorizing and methods became ''de rigueur'' as part of the 'post-modern moment' in anthropology: Ethnographies became more reflexive, explicitly addressing the author's methodology, cultural, gender and racial positioning, and their influence on his or her ethnographic analysis. This was part of a more general trend of [[postmodernism]] that was popular contemporaneously.&lt;ref&gt;Gellner, Ernest (1992) Postmodernism, Reason, and Religion. London/New York: Routledge. Pp: 26-50&lt;/ref&gt; Currently anthropologists pay attention to a wide variety of issues pertaining to the contemporary world, including [[globalization]], [[medicine]] and [[biotechnology]], [[indigenous rights]], [[virtual communities]], and the anthropology of [[industrial society|industrialized societies]].
+
+==Controversies about its history==
+Anthropologists, like other researchers (especially historians and scientists engaged in field research), have over time assisted state policies and projects, especially colonialism.&lt;ref name = &quot;pbuteh&quot;&gt;Asad, Talal, ed. (1973) ''Anthropology &amp; the Colonial Encounter.'' Atlantic Highlands, NJ: Humanities Press.&lt;/ref&gt;&lt;ref&gt;van Breman, Jan, and Akitoshi Shimizu (1999) ''Anthropology and Colonialism in Asia and Oceania''. Richmond, Surrey: Curzon Press.&lt;/ref&gt;
+
+Some commentators have contended:
+
+*That the discipline grew out of colonialism, perhaps was in league with it, and derived some of its key notions from it, consciously or not.   (See, for example, Gough, Pels and Salemink, but cf. Lewis 2004).&lt;ref name=Gellner&gt;Gellner, Ernest (1992) ''Postmodernism, Reason, and Religion''. London/New York: Routledge. Pp: 26-29.&lt;/ref&gt;
+*That ethnographic work was often [[Ahistoricism|ahistorical]], writing about people as if they were &quot;out of time&quot; in an &quot;ethnographic present&quot; ([[Johannes Fabian]], ''Time and Its Other'').
+
+===Military===
+Anthropologists' involvement with the U.S. government, in particular, has caused bitter controversy within the discipline. Franz Boas publicly objected to US participation in [[World War I]], and after the war he published a brief expose and condemnation of the participation of several American archaeologists in espionage in Mexico under their cover as scientists.
+
+But by the 1940s, many of Boas' anthropologist contemporaries were active in the allied war effort against the &quot;Axis&quot; (Nazi Germany, Fascist Italy, and Imperial Japan). Many served in the armed forces, while others worked in intelligence (for example, [[Office of Strategic Services]] and the [[Office of War Information]]). At the same time, [[David H. Price]]'s work on American anthropology during the Cold War provides detailed accounts of the pursuit and dismissal of several anthropologists from their jobs for communist sympathies.
+
+Attempts to accuse anthropologists of complicity with the CIA and government intelligence activities during the Vietnam War years have turned up surprisingly little (although anthropologist Hugo Nutini was active in the stillborn [[Project Camelot]]).&lt;ref&gt;Horowitz, Lewis ed.(1967) The Rise and Fall of Project Camelot.&lt;/ref&gt; Many anthropologists (students and teachers) were active in the antiwar movement.  Numerous resolutions condemning the war in all its aspects were passed overwhelmingly at the annual meetings of the [[American Anthropological Association]] (AAA).
+
+Professional anthropological bodies often object to the use of anthropology for the benefit of the [[State (polity)|state]]. Their codes of ethics or statements may proscribe anthropologists from giving secret briefings. The [[Association of Social Anthropologists of the UK and Commonwealth]] (ASA) has called certain scholarship ethically dangerous. The AAA's current 'Statement of Professional Responsibility' clearly states that &quot;in relation with their own government and with host governments ... no secret research, no secret reports or debriefings of any kind should be agreed to or given.&quot;
+
+Anthropologists, along with other social scientists, are working with the US military as part of the US Army's strategy in Afghanistan.&lt;ref&gt;[http://www.csmonitor.com/2007/0907/p01s08-wosc.htm Christian Science Monitor]&lt;/ref&gt; The [[Christian Science Monitor]] reports that &quot;Counterinsurgency efforts focus on better grasping and meeting local needs&quot; [[War in Afghanistan (2001–present)|in Afghanistan]], under the ''[[Human Terrain System]]'' (HTS) program; in addition, HTS teams are working with the [[US military in Iraq]].&lt;ref&gt;[http://www.army.mil/professionalwriting/volumes/volume4/december_2006/12_06_2.html Army.mil]&lt;/ref&gt;
+
+==Major discussions==
+===Focus on other cultures===&lt;!-- title wikilinked from [[Urban anthropology]] --&gt;
+Some authors argue that anthropology originated and developed as the study of &quot;other cultures&quot;, both in terms of time (past societies) and space (non-European/non-[[Western world|Western]] societies).&lt;ref&gt;See the many essays relating to this in Prem Poddar and David Johnson, Historical Companion to Postcolonial Thought in English, Edinburgh Univeristy Press, 2004. See also Prem Poddar et al , Historical Companion to Postcolonial Literatures--Continental Europe and its Empires, Edinburgh University Press, 2008&lt;/ref&gt; For example, the classic of [[urban anthropology]], [[Ulf Hannerz]] in the introduction to his seminal ''Exploring the City: Inquiries Toward an Urban Anthropology'' mentions that the &quot;[[Third World]]&quot; had habitually received most of attention; anthropologists who traditionally specialized in &quot;other cultures&quot; looked for them far away and started to look &quot;across the tracks&quot; only in late 1960s.&lt;ref&gt;[[Ulf Hannerz]] (1980) &quot;Exploring the City: Inquiries Toward an Urban Anthropology&quot;, ISBN 0231083769, p. 1&lt;/ref&gt;
+
+Now there exist many works focusing on peoples and topics very close to the author's &quot;home&quot;.&lt;ref name=&quot;Lewis&quot; /&gt; It is also argued that other fields of study, like [[History]] and [[Sociology]], on the contrary focus disproportionately on the West.&lt;ref&gt;[[Jack Goody]] (2007) ''[http://books.google.com/books?id=jo1UVi48KywC The Theft of History]'' Cambridge University Press ISBN 0521870690&lt;/ref&gt;
+
+In France, the study of Western societies has been traditionally left to [[sociologist]]s, but this is increasingly changing,&lt;ref&gt;*{{Cite journal | last1 = Abélès | first1 = Marc | year = | title = How the Anthropology of France Has Changed Anthropology in France: Assessing New Directions in the Field | url = http://www.jstor.org/view/08867356/ap020057/02a00050/3?frame=noframe | journal = [[Cultural Anthropology]] | volume = 1999 | issue = | page = 407 }}&lt;/ref&gt; starting in the 1970s from scholars like [[Isac Chiva]] and journals like ''[[Terrain (journal)|Terrain]]'' (&quot;fieldwork&quot;), and developing with the center founded by [[Marc Augé]] (''[[École des hautes études en sciences sociales|Le Centre d'anthropologie des mondes contemporains]]'', the Anthropological Research Center of Contemporary Societies). The same approach of focusing on &quot;modern world&quot; topics by ''Terrain'', was also present in the British [[Manchester School (anthropology)|Manchester School]] of the 1950s.{{Citation needed|date=February 2008}}
+
+==See also==
+{{Portal|Anthropology}}
+
+{{Wikipedia books}}
+{{Main|Outline of anthropology}}
+
+*[[American Anthropological Association]] (AAA)
+*[[Anthropological Index Online]] (AIO)
+*[[Anthrozoology]]
+*[[Anthropological science fiction]]
+*[[Applied anthropology]]
+*[[AIBR. Asociación de Antropólogos Iberoamericanos en Red|Asociación de Antropólogos Iberoamericanos en Red, AIBR]]
+*[[Ethnology]]
+*[[Ethology]]
+*[[Folklore]]
+*[[Human ethology]]
+*[[Human evolution]]
+*[[Intangible Cultural Heritage]]
+*[[Legal anthropology]]
+*[[Madison Grant]]
+*[[Memetics]]
+*[[Philosophical anthropology]]
+*[[Prehistoric medicine]]
+*[[Phronetic social science]]
+*[[Sociology]]
+*[[Systems theory in anthropology]]
+*[[Theological anthropology]], which is not part of anthropology but a sub-field of theology
+* Periodic Table of Human Sciences / Anthropology in [[Tinbergen's four questions]]
+
+==References==
+{{reflist|colwidth=35em}}
+&lt;div class=&quot;references-small&quot;&gt;&lt;/div&gt;
+
+==Further reading==
+===Dictionaries and encyclopedias===
+*Barfield, Thomas (1997).  ''The dictionary of anthropology.''  Hoboken: Wiley-Blackwell Publishing.
+*Levinson, David and Melvin Ember. eds. (1996) ''Encyclopedia of Cultural Anthropology''. (4 vols.) New York: Henry Holt.
+
+===Fieldnotes and memoirs of anthropologists===
+*Barley, Nigel (1983) ''The innocent anthropologist: notes from a mud hut''. London: British Museum Publications.
+*Geertz, Clifford (1995) ''After the fact: two countries, four decades, one anthropologist''. Cambridge, MA: Harvard University Press.
+*Lévi-Strauss, Claude (1967) ''Tristes tropiques''. Translated from the French by John Russell. New York: Atheneum.
+*Malinowski, Bronisław (1967) ''A diary in the strict sense of the term''. Translated by Norbert Guterman. New York, Harcourt, Brace &amp; World.
+*Mead, Margaret (1972) '' Blackberry winter: my earlier years''. New York: William Marrow.
+*Mead, Margaret, (1977)  ''Letters from the field, 1925 - 1975''. New York: Harper &amp; Row.
+*Rabinow, Paul. (1977) ''Reflections on fieldwork in Morocco''.
+
+===Histories===
+*Asad, Talal, ed. (1973) ''Anthropology &amp; the Colonial Encounter''. Atlantic Highlands, NJ: Humanities Press.
+*Barth, Fredrik, Andre Gingrich, Robert Parkin,  ''One Discipline, Four Ways: British, German, French, and American anthropology''. Chicago: University of Chicago Press.
+*D'Andrade, R. &quot;The Sad Story of Anthropology: 1950-1999.&quot; In E. L. Cerroni-Long, ed. ''Anthropological Theory in North America''. Westport: Berin &amp; Garvey 1999. [http://www.anthro.ucsd.edu/~rdandrad/Sadstory Anthro.ucsd.edu]
+*Darnell, Regna. (2001) ''Invisible Genealogies: A History of Americanist Anthropology''. Lincoln, NE: University of Nebraska Press.
+*Harris, Marvin. (2001[1968]) ''The rise of anthropological theory: a history of theories of culture''. AltaMira Press. Walnut Creek, CA.
+*Kehoe, Alice B. (1998)  ''The Land of Prehistory: A Critical History of American Archaeology''.
+*Lewis, Herbert S. (1998) &quot;The Misrepresentation of Anthropology and its Consequences.&quot; ''American Anthropologist'', 100: 716-731. [http://www3.interscience.wiley.com/journal/120141882/abstract Interscience.wiley.com], Lewis
+*Lewis, Herbert S. (2004) &quot;Imagining Anthropology's History.&quot; ''Reviews in Anthropology'', v. 33.
+*Lewis, Herbert S. (2005) &quot;Anthropology, the Cold War, and Intellectual History. In R. Darnell &amp; F.W. Gleach, eds. ''Histories of Anthropology Annual'', Vol. I.
+*Pels, Peter &amp; Oscar Salemink, eds. (2000) ''Colonial Subjects: Essays on the Practical History of Anthropology''.
+*Price, David. (2004) ''Threatening Anthropology: McCarthyism and the FBI's Surveillance of Activist Anthropologists''.
+*Stocking, George, Jr. (1968) ''Race, Culture and Evolution''. New York: Free Press.
+*Trencher, Susan. (2000) ''Mirrored Images: American Anthropology and American Culture, 1960-1980''.
+* Gisi, Lucas Marco. (2007) ''Einbildungskraft und Mythologie. Die Verschränkung von Anthropologie und Geschichte im 18. Jahrhundert'', Berlin, New York: de Gruyter.
+
+===Textbooks and key theoretical works===
+*Clifford, James and George E. Marcus (1986) ''Writing culture: the poetics and politics of ethnography''. Berkeley: University of California Press.
+*Geertz, Clifford (1973) ''The Interpretation of Cultures''. New York: Basic Books.
+*Harris, Marvin (1997) ''Culture, People, Nature: An Introduction to General Anthropology (7th Edition)''. Boston: Allyn &amp; Bacon
+*Salzmann, Zdeněk. (1993) ''Language, culture, and society: an introduction to linguistic anthropology''. Boulder, CO: Westview Press.
+*Shweder, Richard A., and Robert A. LeVine, eds. (1984) ''Culture Theory: essays on mind, self, and emotion''. Cambridge, UK: Cambridge University Press.
+
+==External links==
+{{WVS}}
+{{wikiquote|Anthropology}}
+* [http://www.germananthropology.com/ Webpage &quot;History of German Anthropology/Ethnology 1945/49-1990]
+*[http://www.aaanet.org/ American Anthropological Association Homepage] Home page of largest professional organization of anthropologists
+*[http://www.physanth.org/ American Association of Physical Anthropologists]
+*[http://www.aas.asn.au/ Australian Anthropological Society]
+*[http://www.aibr.org/ Iberoamerican Association of Anthropology AIBR]
+*[http://www.easaonline.org/ European Association of Social Anthropologists]
+*[http://www.movinganthropology.net/ Moving Anthropology Student Network - International Association of Social Anthropology Students]
+*[http://www.isita-org.com/ Italian Institute of Anthropology]
+*[http://www.practicinganthropology.org/ National Association for the Practice of Anthropology]
+*[http://www.therai.org.uk/ The Royal Anthropological Institute Homepage]—The Royal Anthropological Institute of Great Britain and Ireland (RAI)
+*[http://www.sfaa.net/ The Society for Applied Anthropology]
+*[http://arjournals.annualreviews.org/loi/anthro Annual Review of Anthropology]
+*[http://anthro.amnh.org/ Division of Anthropology, American Museum of Natural History] Online collections database with detailed description and digital images for over 160,000 ethnographic artifacts.
+*[http://www.nmnh.si.edu/naa/ National Anthropological Archives, Smithsonian Institution] Collects and preserves historical and contemporary anthropological materials that document the world's cultures and the history of anthropology
+*[http://www.aio.anthropology.org.uk The Anthropological Index Online] Online biblographic database.
+*[https://www.researchgate.net/science/26_Anthropology Anthropology Researcher and Groups]
+{{Use dmy dates|date=August 2011}}
+
+{{Social sciences-footer}}
+
+[[Category:Anthropology| ]]
+[[Category:Greek loanwords]]
+[[Category:Social sciences]]
+
+{{Link FA|es}}
+[[af:Antropologie]]
+[[am:የሰው ልጅ ጥናት]]
+[[ar:أنطروبولوجيا]]
+[[an:Antropolochía]]
+[[frp:Antropologia]]
+[[ast:Antropoloxía]]
+[[gn:Avakuaaty]]
+[[az:Antropologiya]]
+[[bm:Antropoloji]]
+[[bn:নৃবিজ্ঞান]]
+[[zh-min-nan:Jîn-lūi-ha̍k]]
+[[be:Антрапалогія]]
+[[be-x-old:Антрапалёгія]]
+[[bo:མིའི་རིགས་དཔྱད་པའི་རིག་པ།]]
+[[bs:Antropologija]]
+[[br:Antropologiezh]]
+[[bg:Антропология]]
+[[ca:Antropologia]]
+[[cv:Антропологи]]
+[[ceb:Antropolohiya]]
+[[cs:Antropologie]]
+[[co:Antropologia]]
+[[cy:Anthropoleg]]
+[[da:Antropologi]]
+[[de:Anthropologie]]
+[[et:Antropoloogia]]
+[[el:Ανθρωπολογία]]
+[[es:Antropología]]
+[[eo:Antropologio]]
+[[eu:Antropologia]]
+[[fa:مردم‌شناسی]]
+[[fr:Anthropologie]]
+[[fy:Antropology]]
+[[fur:Antropologjie]]
+[[ga:Antraipeolaíocht]]
+[[gv:Antrapoaylleeaght]]
+[[gd:Corp-eòlas]]
+[[gl:Antropoloxía]]
+[[ko:인류학]]
+[[hi:मानवशास्त्र]]
+[[hr:Antropologija]]
+[[io:Antropologio]]
+[[id:Antropologi]]
+[[ia:Anthropologia]]
+[[ie:Antropologie]]
+[[os:Антропологи]]
+[[is:Mannfræði]]
+[[it:Antropologia]]
+[[he:אנתרופולוגיה]]
+[[jv:Antropologi]]
+[[kl:Inuup ineriartorneranik ilisimatusarneq]]
+[[ka:ანთროპოლოგია]]
+[[csb:Antropòlogijô]]
+[[kk:Антропология]]
+[[ky:Антропология]]
+[[ht:Antropoloji]]
+[[ku:Antropolojî]]
+[[lad:Antropolojiya]]
+[[lo:ມະນຸດສາດ]]
+[[la:Anthropologia]]
+[[lv:Antropoloģija]]
+[[lb:Anthropologie]]
+[[lt:Antropologija]]
+[[lij:Antropologia]]
+[[li:Antropologie]]
+[[jbo:remske]]
+[[hu:Antropológia]]
+[[mk:Антропологија]]
+[[ml:നരവംശശാസ്ത്രം]]
+[[mt:Antropoloġija]]
+[[mr:मानववंशशास्त्र]]
+[[arz:انثروبولوجيا]]
+[[ms:Antropologi]]
+[[mwl:Antropologie]]
+[[my:မနုဿဗေဒ]]
+[[nl:Antropologie]]
+[[nds-nl:Antropologie]]
+[[ja:人類学]]
+[[no:Antropologi]]
+[[nn:Antropologi]]
+[[nrm:Anthropologie]]
+[[nov:Antropologia]]
+[[oc:Antropologia]]
+[[ps:وګړپوهنه]]
+[[tpi:Antropolosi]]
+[[pl:Antropologia]]
+[[pt:Antropologia]]
+[[ro:Antropologie]]
+[[rue:Антрополоґія]]
+[[ru:Антропология]]
+[[sah:Антропология]]
+[[sa:मानवविज्ञानं]]
+[[sc:Antropologia]]
+[[sco:Anthropology]]
+[[sq:Antropologjia]]
+[[scn:Antropoluggìa]]
+[[simple:Anthropology]]
+[[sk:Antropológia]]
+[[sl:Antropologija]]
+[[sr:Антропологија]]
+[[sh:Antropologija]]
+[[su:Antropologi]]
+[[fi:Antropologia]]
+[[sv:Antropologi]]
+[[tl:Agham-tao]]
+[[ta:மானிடவியல்]]
+[[tt:Антропология]]
+[[th:มานุษยวิทยา]]
+[[tg:Мардумшиносӣ]]
+[[tr:Antropoloji]]
+[[uk:Антропологія]]
+[[ur:علم انسان شناسی]]
+[[vec:Studio de l'omo]]
+[[vi:Nhân chủng học]]
+[[fiu-vro:Antropoloogia]]
+[[war:Antropolohiya]]
+[[yi:אנטראפאלאגיע]]
+[[diq:Antropolociye]]
+[[zea:Antropolohie]]
+[[bat-smg:Antropoluogėjė]]
+[[zh:人类学]]
