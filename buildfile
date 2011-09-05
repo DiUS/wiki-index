@@ -37,16 +37,3 @@ define "wiki-index" do
   package(:jar)
 end
 
-task :mirah_tests => "wiki-index:test" do
-  TESTING_JARS = [  ]
-  
-  Buildr.ant.junit(:haltonfailure => 'true', :fork => 'true') do
-    classpath :path => (TESTING_JARS + ['target', 'test']).join(":")
-    batchtest do
-      fileset :dir => "test" do
-        include :name => '**/*Test.class'
-      end
-      formatter :type => 'plain', :usefile => 'false'
-    end
-  end
-end
