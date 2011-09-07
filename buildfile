@@ -27,22 +27,24 @@ end
 desc "The SpringSense Wikipedia Indexing project"
 define "wiki-index" do
   extend PomGenerator
+  extend TransitiveDependencies
 
   project.version = VERSION_NUMBER
   project.group = GROUP
+  project.transitive_scopes = [:compile, :run, :test]
+
   manifest["Implementation-Vendor"] = COPYRIGHT
   
-  WIKITEXT = [ artifact("org.sweble.wikitext:swc-engine:jar:1.0.0"), artifact("org.sweble.wikitext:swc-parser-lazy:jar:1.0.0")]
-
   LOG4J = artifact("log4j:log4j:jar:1.2.16")
+  
+  WIKITEXT = artifact("org.sweble.wikitext:swc-engine:jar:1.0.0")
+  COMMONS_IO = artifact("commons-io:commons-io:jar:2.0.1")
 
   JUNIT4 = artifact("junit:junit:jar:4.8.2")
   HAMCREST = artifact("org.hamcrest:hamcrest-core:jar:1.2.1")
   MOCKITO = artifact("org.mockito:mockito-all:jar:1.8.5")
        
-  puts artifact("junit:junit:jar:4.8.2").to_s
-
-  compile.with WIKITEXT, LOG4J
+  compile.with WIKITEXT, LOG4J, COMMONS_IO
   test.compile.with JUNIT4, HAMCREST, MOCKITO
   
   package(:jar)
