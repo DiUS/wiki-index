@@ -23,13 +23,17 @@ class ArticleRendererTest
   def test_text_should_return_article_content_as_text:void
       rendered_text = @article_renderer.render_as_text(@article)
 
-      puts "========================================"
-      puts rendered_text
-      puts "========================================"
+      # puts "========================================"
+      # puts rendered_text
+      # puts "========================================"
 
       assertThat(
         rendered_text, 
         containsString("Biological anthropology, or physical anthropology, focuses on the study"))
+
+      assertThat(
+        rendered_text, 
+        Matchers.not(containsString("<UNSUPPORTED")))
   end
   
 end

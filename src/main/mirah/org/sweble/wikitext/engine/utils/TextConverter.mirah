@@ -30,6 +30,8 @@ import org.sweble.wikitext.lazy.parser.Bold
 import org.sweble.wikitext.lazy.parser.ExternalLink
 import org.sweble.wikitext.lazy.parser.HorizontalRule
 import org.sweble.wikitext.lazy.parser.ImageLink
+import org.sweble.wikitext.lazy.parser.Itemization
+import org.sweble.wikitext.lazy.parser.ItemizationItem
 import org.sweble.wikitext.lazy.parser.InternalLink
 import org.sweble.wikitext.lazy.parser.Italics
 import org.sweble.wikitext.lazy.parser.MagicWord
@@ -115,9 +117,19 @@ class TextConverter < Visitor
   
   def visit(n: AstNode):void
     # Fallback for all nodes that are not explicitly handled below
-    write("<")
+    write("<UNSUPPORTED ")
     write(n.getNodeName())
     write(" />")
+  end
+  
+  def visit(i: Itemization):void
+    iterate(i)
+  end
+  
+  def visit(i: ItemizationItem):void
+    write("\t* ")
+    iterate(i.getContent)
+    newline(1)
   end
   
   def visit(n: NodeList):void
@@ -137,15 +149,15 @@ class TextConverter < Visitor
   end
   
   def visit(b: Bold):void
-    write("**")
+#    write("**")
     iterate(b.getContent())
-    write("**")
+#    write("**")
   end
   
   def visit(i: Italics):void
-    write("//")
+#    write("//")
     iterate(i.getContent())
-    write("//")
+#    write("//")
   end
   
   def visit(cr: XmlCharRef):void   
