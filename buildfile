@@ -13,7 +13,7 @@ COPYRIGHT = "(C) Copyright 2011 SpringSense Trust. All rights reserved. Licensed
 repositories.remote << "http://repo1.maven.org/maven2"
 repositories.remote << "http://www.ibiblio.org/maven2"
 repositories.remote << "http://mojo.informatik.uni-erlangen.de/nexus/content/repositories/public-releases"
-repositories.remote << "http://192.168.0.91/~artifacts/repository"
+repositories.remote << "http://192.168.0.96/~artifacts/repository"
 
 # UGLY MONKEY PATCH to make Buildr-Mirah run the tests
 module Buildr
@@ -83,6 +83,7 @@ end
 
 task 'wiki-index:hadoop-job-jar' => "target/wiki-index-hadoop-job-#{project('wiki-index').version}.jar"
 
+#puts project('wiki-index').compile.dependencies.map(&:to_s).sort
 #puts task('wiki-index:hadoop-job-jar').inspect
 #puts task('wiki-index:hadoop-job-jars').inspect
 #puts task("target/wiki-index-hadoop-job-#{project('wiki-index').version}.jar").inspect
