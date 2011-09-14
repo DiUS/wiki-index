@@ -41,10 +41,8 @@ define "wiki-index" do
   LOG4J = artifact("log4j:log4j:jar:1.2.16")
   
   HADOOP = artifact('org.apache.hadoop:hadoop-core:jar:0.20.204.0')
-  CLOUD9 = [ 
-    artifact("edu.umd:cloud9:jar:1.2.4"), 
-    artifact("info.bliki.wiki:bliki-core:jar:3.0.16"), 
-    ]
+  CLOUD9 = artifact("edu.umd:cloud9:jar:1.2.4")
+  BLIKI = artifact("info.bliki.wiki:bliki-core:jar:3.0.16")
   
   DISAMBIGJ = artifact("com.springsense:disambigj:jar:2.0.0.51")
   WIKITEXT = artifact("org.sweble.wikitext:swc-engine:jar:1.0.0")
@@ -55,7 +53,7 @@ define "wiki-index" do
   MOCKITO = artifact("org.mockito:mockito-all:jar:1.8.5")
   MAP_REDUCE_UNIT = artifact("com.cloudera.hadoop:hadoop-mrunit:jar:0.20.2-737")
        
-  compile.with HADOOP, CLOUD9, DISAMBIGJ, WIKITEXT, LOG4J, COMMONS_IO
+  compile.with HADOOP, CLOUD9, BLIKI, DISAMBIGJ, WIKITEXT, LOG4J, COMMONS_IO
   test.compile.with JUNIT4, HAMCREST, MOCKITO, MAP_REDUCE_UNIT
   
   package(:jar)
@@ -87,7 +85,7 @@ end
 
 task 'wiki-index:hadoop-job-jar' => "target/wiki-index-hadoop-job-#{project('wiki-index').version}.jar"
 
-#puts project('wiki-index').compile.dependencies.map(&:to_s).sort
+# puts project('wiki-index').compile.dependencies.map(&:to_s).sort
 #puts task('wiki-index:hadoop-job-jar').inspect
 #puts task('wiki-index:hadoop-job-jars').inspect
 #puts task("target/wiki-index-hadoop-job-#{project('wiki-index').version}.jar").inspect
