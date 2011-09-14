@@ -14,6 +14,7 @@ repositories.remote << "http://repo1.maven.org/maven2"
 repositories.remote << "http://www.ibiblio.org/maven2"
 repositories.remote << "http://mojo.informatik.uni-erlangen.de/nexus/content/repositories/public-releases"
 repositories.remote << "http://192.168.0.96/~artifacts/repository"
+repositories.remote << "https://repository.cloudera.com/artifactory/repo"
 
 # UGLY MONKEY PATCH to make Buildr-Mirah run the tests
 module Buildr
@@ -40,7 +41,10 @@ define "wiki-index" do
   LOG4J = artifact("log4j:log4j:jar:1.2.16")
   
   HADOOP = artifact('org.apache.hadoop:hadoop-core:jar:0.20.204.0')
-  CLOUD9 = artifact("edu.umd:cloud9:jar:1.2.4")
+  CLOUD9 = [ 
+    artifact("edu.umd:cloud9:jar:1.2.4"), 
+    artifact("info.bliki.wiki:bliki-core:jar:3.0.16"), 
+    ]
   
   DISAMBIGJ = artifact("com.springsense:disambigj:jar:2.0.0.51")
   WIKITEXT = artifact("org.sweble.wikitext:swc-engine:jar:1.0.0")
@@ -49,10 +53,10 @@ define "wiki-index" do
   JUNIT4 = artifact("junit:junit:jar:4.8.2")
   HAMCREST = artifact("org.hamcrest:hamcrest-core:jar:1.2.1")
   MOCKITO = artifact("org.mockito:mockito-all:jar:1.8.5")
-  #MAP_REDUCE_UNIT = artifact("com.cloudera.hadoop:hadoop-mrunit:0.20.2-320:jar")
+  MAP_REDUCE_UNIT = artifact("com.cloudera.hadoop:hadoop-mrunit:jar:0.20.2-737")
        
   compile.with HADOOP, CLOUD9, DISAMBIGJ, WIKITEXT, LOG4J, COMMONS_IO
-  test.compile.with JUNIT4, HAMCREST, MOCKITO#, MAP_REDUCE_UNIT
+  test.compile.with JUNIT4, HAMCREST, MOCKITO, MAP_REDUCE_UNIT
   
   package(:jar)
   

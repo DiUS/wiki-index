@@ -17,6 +17,7 @@ class ArticleRendererTest
     
     @article_renderer = ArticleRenderer.new()
     @article = Article.new(-1, "Anthropology", IOUtils.toString(getClass.getClassLoader.getResourceAsStream("test-article.wikitext")))
+    
   end
 
   $Test
