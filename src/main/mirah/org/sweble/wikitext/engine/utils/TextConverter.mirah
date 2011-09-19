@@ -36,6 +36,8 @@ import org.sweble.wikitext.lazy.parser.InternalLink
 import org.sweble.wikitext.lazy.parser.Italics
 import org.sweble.wikitext.lazy.parser.MagicWord
 import org.sweble.wikitext.lazy.parser.Paragraph
+import org.sweble.wikitext.lazy.parser.SemiPre
+import org.sweble.wikitext.lazy.parser.SemiPreLine
 import org.sweble.wikitext.lazy.parser.Section
 import org.sweble.wikitext.lazy.parser.Url
 import org.sweble.wikitext.lazy.parser.Whitespace
@@ -120,6 +122,15 @@ class TextConverter < Visitor
     write("<UNSUPPORTED ")
     write(n.getNodeName())
     write(" />")
+  end
+  
+  def visit(s: SemiPre):void
+    iterate(s)
+  end
+  
+  def visit(l: SemiPreLine):void
+    iterate(l.getContent)
+    newline(1)
   end
   
   def visit(i: Itemization):void

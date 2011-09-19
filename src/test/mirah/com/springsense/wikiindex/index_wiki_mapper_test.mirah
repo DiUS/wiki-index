@@ -37,7 +37,7 @@ class IndexWikiMapperTest
     
     output = @driver.run
 
-    assertEquals(Text.new("Red Army invasion of Azerbaijan"), Pair(output.get(0)).getFirst)
-#    assertEquals(Text.new(""), Pair(output.get(0)).getSecond)
+    assertEquals(Text.new( "Red Army invasion of Azerbaijan" ), Pair(output.get(0)).getFirst)
+    assertEquals(Text.new( IOUtils.toString(getClass.getClassLoader.getResourceAsStream("test-article-red-army.wikitext")) ), Pair(output.get(0)).getSecond)
   end
 end
