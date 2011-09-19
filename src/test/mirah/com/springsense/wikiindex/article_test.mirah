@@ -21,5 +21,12 @@ class ArticleTest
     
     @article = Article.new(@id, @title, @articleWikitext)
   end
-  
+ 
+  $Test
+  def article_should_instantiate_correctly:void
+    assertThat(Integer.new(@article.id), equalTo(Integer.new(@id)))
+    assertThat(@article.title, equalTo(@title))
+    assertThat(@article.wikitext, equalTo(@articleWikitext))
+  end
+
 end
