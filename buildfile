@@ -56,6 +56,9 @@ define "wiki-index" do
   compile.with HADOOP, CLOUD9, BLIKI, DISAMBIGJ, WIKITEXT, LOG4J, COMMONS_IO
   test.compile.with JUNIT4, HAMCREST, MOCKITO, MAP_REDUCE_UNIT
   
+  test.using :fork => true
+  test.using :java_args=>[ '-Xmx2g' ]
+  
   package(:jar)
   
 end
