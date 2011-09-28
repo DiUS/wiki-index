@@ -1,20 +1,33 @@
-// Generated from article_renderer_test.mirah
 package com.springsense.wikiindex;
 
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.not;
+import static org.junit.Assert.assertThat;
 
-public class ArticleRendererTest extends java.lang.Object {
-  private com.springsense.wikiindex.ArticleRenderer article_renderer;
-  private com.springsense.wikiindex.Article article;
-  @org.junit.Before()
-  public void setup() throws Exception {
-    this.article_renderer = new com.springsense.wikiindex.ArticleRenderer();
-    this.article = new com.springsense.wikiindex.Article(-1, "Anthropology", org.apache.commons.io.IOUtils.toString(this.getClass().getClassLoader().getResourceAsStream("test-article.wikitext")));
-  }
-  @org.junit.Test()
-  public void test_text_should_return_article_content_as_text() {
-    java.lang.String rendered_text = null;
-    rendered_text = this.article_renderer.renderAsText(this.article);
-    org.junit.Assert.assertThat(rendered_text, org.hamcrest.Matchers.containsString("Biological anthropology, or physical anthropology, focuses on the study"));
-    org.junit.Assert.assertThat(rendered_text, org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("<UNSUPPORTED")));
-  }
+import org.apache.commons.io.IOUtils;
+import org.junit.Before;
+import org.junit.Test;
+
+public class ArticleRendererTest {
+	private ArticleRenderer articleRenderer;
+	private Article article;
+
+	@Before()
+	public void setup() throws Exception {
+		articleRenderer = new ArticleRenderer();
+		
+		article = new Article(-1, "Anthropology", IOUtils.toString(getClass()
+				.getClassLoader().getResourceAsStream("test-article.wikitext")));
+	}
+
+	@Test()
+	public void testTextShouldReturnArticleContentAsText() {
+		String renderedText = null;
+		renderedText = articleRenderer.renderAsText(article);
+		
+		assertThat(
+				renderedText,
+				containsString("Biological anthropology, or physical anthropology, focuses on the study"));
+		assertThat(renderedText, not(containsString("<UNSUPPORTED")));
+	}
 }
