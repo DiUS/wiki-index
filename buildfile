@@ -43,6 +43,9 @@ define "wiki-index" do
   HADOOP = artifact('org.apache.hadoop:hadoop-core:jar:0.20.204.0')
   CLOUD9 = artifact("edu.umd:cloud9:jar:1.2.4")
   BLIKI = artifact("info.bliki.wiki:bliki-core:jar:3.0.16")
+
+  GUAVA = artifact('com.google.guava:guava:jar:r09')
+  JACKSON = artifact('org.codehaus.jackson:jackson-core-asl:jar:1.8.5')
   
   DISAMBIGJ = artifact("com.springsense:disambigj:jar:2.0.0.51")
   WIKITEXT = artifact("org.sweble.wikitext:swc-engine:jar:1.0.0")
@@ -53,7 +56,7 @@ define "wiki-index" do
   MOCKITO = artifact("org.mockito:mockito-all:jar:1.8.5")
   MAP_REDUCE_UNIT = artifact("com.cloudera.hadoop:hadoop-mrunit:jar:0.20.2-737")
        
-  compile.with HADOOP, CLOUD9, BLIKI, DISAMBIGJ, WIKITEXT, LOG4J, COMMONS_IO
+  compile.with GUAVA, JACKSON, HADOOP, CLOUD9, BLIKI, DISAMBIGJ, WIKITEXT, LOG4J, COMMONS_IO
   test.compile.with JUNIT4, HAMCREST, MOCKITO, MAP_REDUCE_UNIT
   
   test.using :fork => true
