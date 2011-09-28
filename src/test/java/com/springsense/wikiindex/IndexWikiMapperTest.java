@@ -1,57 +1,68 @@
-// Generated from index_wiki_mapper_test.mirah
 package com.springsense.wikiindex;
 
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
 import java.io.IOException;
+import java.util.List;
+
+import org.apache.commons.io.IOUtils;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mrunit.MapDriver;
+import org.apache.hadoop.mrunit.types.Pair;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.springsense.disambig.Disambiguator;
+import com.springsense.disambig.DisambiguatorFactory;
+
+import edu.umd.cloud9.collection.wikipedia.WikipediaPage;
 
 public class IndexWikiMapperTest extends java.lang.Object {
-	private com.springsense.disambig.DisambiguatorFactory mock_disambiguator_factory;
-	private com.springsense.disambig.Disambiguator mock_disambiguator;
-	private com.springsense.wikiindex.IndexWikiMapper mapper;
-	private org.apache.hadoop.mrunit.MapDriver driver;
-	private edu.umd.cloud9.collection.wikipedia.WikipediaPage page;
+	private DisambiguatorFactory mockDisambiguatorFactory;
+	private Disambiguator mockDisambiguator;
+	private IndexWikiMapper mapper;
+	private MapDriver driver;
+	private WikipediaPage page;
 
-	@org.junit.Before()
+	@Before()
 	public void setUp() throws Exception {
-		this.mock_disambiguator_factory = ((com.springsense.disambig.DisambiguatorFactory) (org.mockito.Mockito
-				.mock(com.springsense.disambig.DisambiguatorFactory.class)));
-		this.mock_disambiguator = ((com.springsense.disambig.Disambiguator) (org.mockito.Mockito
-				.mock(com.springsense.disambig.Disambiguator.class)));
-		org.mockito.Mockito.when(
-				this.mock_disambiguator_factory.openNewDisambiguator())
-				.thenReturn(this.mock_disambiguator);
-		this.mapper = new com.springsense.wikiindex.IndexWikiMapper(
-				this.mock_disambiguator_factory);
-		this.driver = new org.apache.hadoop.mrunit.MapDriver(this.mapper);
-		this.page = new edu.umd.cloud9.collection.wikipedia.WikipediaPage();
-		edu.umd.cloud9.collection.wikipedia.WikipediaPage.readPage(
+		mockDisambiguatorFactory = mock(DisambiguatorFactory.class);
+		mockDisambiguator = mock(Disambiguator.class);
+		when(this.mockDisambiguatorFactory.openNewDisambiguator()).thenReturn(
+				this.mockDisambiguator);
+		
+		this.mapper = new IndexWikiMapper(this.mockDisambiguatorFactory);
+		this.driver = new MapDriver(this.mapper);
+		this.page = new WikipediaPage();
+		
+		WikipediaPage.readPage(
 				this.page,
-				org.apache.commons.io.IOUtils.toString(this.getClass()
-						.getClassLoader()
+				IOUtils.toString(this.getClass().getClassLoader()
 						.getResourceAsStream("test-article.xml")));
 	}
 
-	@org.junit.Test()
-	public void mapper_should_return_the_correct_values() throws IOException {
-		java.util.List output = null;
-		java.lang.String article_text = null;
+	@Test()
+	public void mapperShouldReturnTheCorrectValues() throws IOException {
+		List output = null;
+		String articleText = null;
 
-		org.apache.hadoop.mrunit.MapDriver temp$1 = this.driver;
+		driver.setInput(new LongWritable(1024), this.page);
 
-		temp$1.setInput(new org.apache.hadoop.io.LongWritable(1024), this.page);
+		output = driver.run();
 
-		output = this.driver.run();
-		article_text = org.apache.commons.io.IOUtils.toString(this.getClass()
-				.getClassLoader()
+		articleText = IOUtils.toString(this.getClass().getClassLoader()
 				.getResourceAsStream("test-article-red-army.wikitext"));
-		org.junit.Assert.assertEquals(new org.apache.hadoop.io.Text(
+		
+		assertEquals(new Text(
 				"Red Army invasion of Azerbaijan"),
-				((org.apache.hadoop.mrunit.types.Pair) (output.get(0)))
-						.getFirst());
-		org.junit.Assert.assertEquals(new org.apache.hadoop.io.Text(
-				article_text), ((org.apache.hadoop.mrunit.types.Pair) (output
-				.get(0))).getSecond());
-		((com.springsense.disambig.Disambiguator) (org.mockito.Mockito
-				.verify(this.mock_disambiguator))).disambiguateText(
-				article_text, 3, false, true, false);
+				((Pair) (output.get(0))).getFirst());
+		assertEquals(new Text(articleText),
+				((Pair) (output.get(0))).getSecond());
+		verify(this.mockDisambiguator).disambiguateText(articleText, 3, false,
+				true, false);
 	}
 }

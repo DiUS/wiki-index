@@ -32,7 +32,7 @@ public class ArticleRenderer {
 		}
 	}
 
-	public java.lang.String render_as_text(
+	public java.lang.String renderAsText(
 			com.springsense.wikiindex.Article article) {
 		return this.render_as_text(article.id(), article.title(),
 				article.wikitext());

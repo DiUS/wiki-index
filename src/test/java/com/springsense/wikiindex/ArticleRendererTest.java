@@ -13,7 +13,7 @@ public class ArticleRendererTest extends java.lang.Object {
   @org.junit.Test()
   public void test_text_should_return_article_content_as_text() {
     java.lang.String rendered_text = null;
-    rendered_text = this.article_renderer.render_as_text(this.article);
+    rendered_text = this.article_renderer.renderAsText(this.article);
     org.junit.Assert.assertThat(rendered_text, org.hamcrest.Matchers.containsString("Biological anthropology, or physical anthropology, focuses on the study"));
     org.junit.Assert.assertThat(rendered_text, org.hamcrest.Matchers.not(org.hamcrest.Matchers.containsString("<UNSUPPORTED")));
   }
