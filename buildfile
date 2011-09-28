@@ -1,7 +1,6 @@
 require 'rubygems'
 require "bundler/setup"
 require 'buildr-dependency-extensions'
-require "buildr/mirah"
 
 # Version number for this release
 VERSION_NUMBER = "0.1.#{ENV['BUILD_NUMBER'] || 'SNAPSHOT'}"
@@ -15,17 +14,6 @@ repositories.remote << "http://www.ibiblio.org/maven2"
 repositories.remote << "http://mojo.informatik.uni-erlangen.de/nexus/content/repositories/public-releases"
 repositories.remote << "http://192.168.0.96/~artifacts/repository"
 repositories.remote << "https://repository.cloudera.com/artifactory/repo"
-
-# UGLY MONKEY PATCH to make Buildr-Mirah run the tests
-module Buildr
-  class TestFramework::Java < TestFramework::Base
-    class << self
-      def applies_to?(project) #:nodoc:
-        project.test.compile.language == :java || project.test.compile.language == :groovy || project.test.compile.language == :mirah
-      end
-    end
-  end
-end
 
 desc "The SpringSense Wikipedia Indexing project"
 define "wiki-index" do
@@ -72,8 +60,6 @@ def jar_dependencies(*dependencies)
   dependencies.flatten.map do | source_jar | 
     target_path = "target/hadoop-job-jar/lib/#{Pathname.new(source_jar.to_s).basename}"
     
-    # puts "#{target_path} => #{source_jar}"
-
     file target_path => [ 'target/hadoop-job-jar/lib', source_jar ] do
       cp source_jar.to_s, target_path
     end
@@ -91,7 +77,3 @@ end
 
 task 'wiki-index:hadoop-job-jar' => "target/wiki-index-hadoop-job-#{project('wiki-index').version}.jar"
 
-# puts project('wiki-index').compile.dependencies.map(&:to_s).sort
-#puts task('wiki-index:hadoop-job-jar').inspect
-#puts task('wiki-index:hadoop-job-jars').inspect
-#puts task("target/wiki-index-hadoop-job-#{project('wiki-index').version}.jar").inspect

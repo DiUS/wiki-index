@@ -15,7 +15,6 @@ GEM
   remote: http://rubygems.org/
   specs:
     atoulme-Antwrap (0.7.1-java)
-    bitescript (0.0.9)
     bouncy-castle-java (1.5.0146.1)
     builder (2.1.2)
     buildr (1.4.6-java)
@@ -37,7 +36,6 @@ GEM
       rubyforge (= 2.0.3)
       rubyzip (= 0.9.4)
       xml-simple (= 1.0.12)
-    buildr-mirah (0.2.0)
     diff-lcs (1.1.2)
     highline (1.5.1)
     hoe (2.3.3)
@@ -47,8 +45,6 @@ GEM
       bouncy-castle-java
     json_pure (1.4.3)
     minitar (0.5.3)
-    mirah (0.0.8-java)
-      bitescript (>= 0.0.8)
     net-sftp (2.0.4)
       net-ssh (>= 2.0.9)
     net-ssh (2.0.23)
@@ -72,5 +68,3 @@ PLATFORMS
 DEPENDENCIES
   buildr
   buildr-dependency-extensions!
-  buildr-mirah
-  mirah
