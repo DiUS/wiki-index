@@ -25,7 +25,7 @@ public class ArticleTest {
 	@Test()
 	public void articleShouldInstantiateCorrectly() {
 		assertThat(article.id(), equalTo(new Integer(id)));
-		assertThat(article.title(), equalTo(title));
-		assertThat(article.wikitext(), equalTo(articleWikitext));
+		assertThat(article.getTitle(), equalTo(title));
+		assertThat(article.getWikitext(), equalTo(articleWikitext));
 	}
 }

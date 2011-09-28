@@ -1,20 +1,25 @@
-// Generated from article_renderer.mirah
 package com.springsense.wikiindex;
 
+import org.sweble.wikitext.engine.CompiledPage;
+import org.sweble.wikitext.engine.Compiler;
 import org.sweble.wikitext.engine.CompilerException;
+import org.sweble.wikitext.engine.PageId;
+import org.sweble.wikitext.engine.PageTitle;
+import org.sweble.wikitext.engine.utils.SimpleWikiConfiguration;
+import org.sweble.wikitext.engine.utils.TextConverter;
 import org.sweble.wikitext.lazy.LinkTargetException;
 
 public class ArticleRenderer {
 
-	private org.sweble.wikitext.engine.utils.SimpleWikiConfiguration config;
-	private org.sweble.wikitext.engine.Compiler compiler;
+	private SimpleWikiConfiguration config;
+	private Compiler compiler;
 
-	public org.sweble.wikitext.engine.utils.SimpleWikiConfiguration config() {
-		if ((this.config != null)) {
-			return this.config;
+	public SimpleWikiConfiguration getConfig() {
+		if ((config != null)) {
+			return config;
 		} else {
 			try {
-				return this.config = new org.sweble.wikitext.engine.utils.SimpleWikiConfiguration(
+				return config = new SimpleWikiConfiguration(
 						"classpath:/org/sweble/wikitext/engine/SimpleWikiConfiguration.xml");
 			} catch (Throwable e) {
 				throw new RuntimeException(
@@ -23,45 +28,40 @@ public class ArticleRenderer {
 		}
 	}
 
-	public org.sweble.wikitext.engine.Compiler compiler() {
-		if ((this.compiler != null)) {
-			return this.compiler;
+	public Compiler getCompiler() {
+		if ((compiler != null)) {
+			return compiler;
 		} else {
-			return this.compiler = new org.sweble.wikitext.engine.Compiler(
-					this.config());
+			return compiler = new org.sweble.wikitext.engine.Compiler(getConfig());
 		}
 	}
 
-	public java.lang.String renderAsText(
-			com.springsense.wikiindex.Article article) {
-		return this.render_as_text(article.id(), article.title(),
-				article.wikitext());
+	public String renderAsText(Article article) {
+		return renderAsText(article.id(), article.getTitle(),
+				article.getWikitext());
 	}
 
-	public java.lang.String render_as_text(int id, java.lang.String title,
-			java.lang.String wikitext) {
-		org.sweble.wikitext.engine.PageTitle pageTitle = null;
-		org.sweble.wikitext.engine.PageId pageId = null;
-		org.sweble.wikitext.engine.CompiledPage cp = null;
+	public String renderAsText(int id, String title, String wikitext) {
+		PageTitle pageTitle = null;
+		PageId pageId = null;
+		CompiledPage cp = null;
 
-		org.sweble.wikitext.engine.utils.TextConverter p = null;
+		TextConverter p = null;
 		try {
-			pageTitle = org.sweble.wikitext.engine.PageTitle.make(
-					this.config(), title);
+			pageTitle = PageTitle.make(getConfig(), title);
 		} catch (LinkTargetException e) {
 			throw new RuntimeException(
 					"Problem rendering article due to an error", e);
 		}
-		pageId = new org.sweble.wikitext.engine.PageId(pageTitle, id);
+		pageId = new PageId(pageTitle, id);
 		try {
-			cp = this.compiler().postprocess(pageId, wikitext, null);
+			cp = getCompiler().postprocess(pageId, wikitext, null);
 		} catch (CompilerException e) {
 			throw new RuntimeException(
 					"Problem rendering article due to an error", e);
 		}
 
-		p = new org.sweble.wikitext.engine.utils.TextConverter(this.config(),
-				80);
+		p = new TextConverter(getConfig(), 80);
 
 		return p.go(cp.getPage()).toString();
 	}
