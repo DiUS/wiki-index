@@ -1,7 +1,6 @@
 // Generated from article_renderer_test.mirah
 package com.springsense.wikiindex;
 
-import java.io.IOException;
 
 public class ArticleRendererTest extends java.lang.Object {
   private com.springsense.wikiindex.ArticleRenderer article_renderer;

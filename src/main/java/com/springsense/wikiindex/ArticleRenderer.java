@@ -1,9 +1,6 @@
 // Generated from article_renderer.mirah
 package com.springsense.wikiindex;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
 import org.sweble.wikitext.engine.CompilerException;
 import org.sweble.wikitext.lazy.LinkTargetException;
 

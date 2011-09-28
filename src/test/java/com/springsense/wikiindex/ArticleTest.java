@@ -1,7 +1,6 @@
 // Generated from article_test.mirah
 package com.springsense.wikiindex;
 
-import java.io.IOException;
 
 public class ArticleTest extends java.lang.Object {
 	private int id;
