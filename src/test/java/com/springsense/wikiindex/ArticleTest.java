@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class ArticleTest {
-	private int id;
+	private long id;
 	private String title;
 	private String articleWikitext;
 	private Article article;
@@ -24,7 +24,7 @@ public class ArticleTest {
 
 	@Test()
 	public void articleShouldInstantiateCorrectly() {
-		assertThat(article.id(), equalTo(new Integer(id)));
+		assertThat(article.id(), equalTo(id));
 		assertThat(article.getTitle(), equalTo(title));
 		assertThat(article.getWikitext(), equalTo(articleWikitext));
 	}

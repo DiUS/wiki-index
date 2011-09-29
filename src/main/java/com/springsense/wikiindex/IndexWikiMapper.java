@@ -2,17 +2,19 @@ package com.springsense.wikiindex;
 
 import java.io.IOException;
 
+import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapred.MapReduceBase;
-import org.apache.hadoop.mapred.Mapper;
-import org.apache.hadoop.mapred.OutputCollector;
-import org.apache.hadoop.mapred.Reporter;
+import org.apache.hadoop.mapreduce.Mapper;
 
 import com.springsense.disambig.Disambiguator;
 import com.springsense.disambig.DisambiguatorFactory;
+import com.springsense.disambig.SentenceDisambiguationResult;
 
-public class IndexWikiMapper extends MapReduceBase
-		implements Mapper {
+import edu.umd.cloud9.collection.wikipedia.WikipediaPage;
+import edu.umd.cloud9.io.JSONObjectWritable;
+
+public class IndexWikiMapper extends
+		Mapper<LongWritable, WikipediaPage, Text, JSONObjectWritable> {
 	private DisambiguatorFactory disambiguatorFactory;
 	private ArticleRenderer article_renderer;
 	private ThreadLocal<Disambiguator> disambiguatorStore;
@@ -22,24 +24,29 @@ public class IndexWikiMapper extends MapReduceBase
 		this.disambiguatorFactory = disambiguatorFactory;
 	}
 
-	public void map(java.lang.Object key, java.lang.Object p,
-			OutputCollector output,
-			Reporter reporter) {
-		edu.umd.cloud9.collection.wikipedia.WikipediaPage w = null;
-		com.springsense.wikiindex.Article article = null;
-		java.lang.String article_text = null;
-		com.springsense.disambig.SentenceDisambiguationResult[] result = null;
-		w = ((edu.umd.cloud9.collection.wikipedia.WikipediaPage) (p));
-		article = new com.springsense.wikiindex.Article(-1, w.getTitle(),
-				w.getWikiMarkup());
-		article_text = getArticleRenderer().renderAsText(article);
-		result = getDisambiguator().disambiguateText(article_text, 3, false,
+	@Override
+	protected void map(LongWritable key, WikipediaPage w, Context context)
+			throws IOException, InterruptedException {
+
+		Article article = null;
+		String articleText = null;
+		
+		article = new Article(key.get(), w.getTitle(), w.getWikiMarkup());
+		
+		articleText = getArticleRenderer().renderAsText(article);
+		
+		SentenceDisambiguationResult[] result = getDisambiguator().disambiguateText(articleText, 3, false,
 				true, false);
+		
 		try {
-			output.collect(new Text(w.getTitle()),
-					new Text(article_text));
-		} catch (IOException e) {
-			throw new RuntimeException("Could not output due to an error", e);
+			JSONObjectWritable document = new JSONObjectWritable();
+
+			document.put("title", article.getTitle());
+			document.put("content", articleText);
+
+			context.write(new Text(article.getTitle()), document);
+		} catch (Exception e) {
+			throw new RuntimeException(String.format("Could not process wikipedia article '%s' due to an error", article.getTitle()), e);
 		}
 	}
 
@@ -66,10 +73,11 @@ public class IndexWikiMapper extends MapReduceBase
 						return (disambiguatorFactory.openNewDisambiguator());
 					} catch (IOException e) {
 						throw new RuntimeException(
-								"Could not create new disambiguator due to an error", e);
+								"Could not create new disambiguator due to an error",
+								e);
 					}
 				}
-				
+
 			};
 		}
 		return disambiguatorStore;

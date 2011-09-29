@@ -41,7 +41,7 @@ public class ArticleRenderer {
 				article.getWikitext());
 	}
 
-	public String renderAsText(int id, String title, String wikitext) {
+	public String renderAsText(long id, String title, String wikitext) {
 		PageTitle pageTitle = null;
 		PageId pageId = null;
 		CompiledPage cp = null;
