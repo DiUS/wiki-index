@@ -7,6 +7,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Mapper.Context;
 import org.apache.log4j.Logger;
+import org.json.JSONException;
 
 import com.springsense.disambig.Disambiguator;
 import com.springsense.disambig.DisambiguatorFactory;
@@ -47,7 +48,13 @@ public class IndexWikiMapper extends
 				String matrixDataDir = context.getConfiguration().get(
 						DISAMBIG_MATRIX_DATA_DIR_KEY);
 				
-				LOG.info(String.format("Starting new disambiguator with path '%s'", matrixDataDir));
+		        //Get the jvm heap size.
+		        long heapSize = Runtime.getRuntime().totalMemory();
+		 
+		        //Print the jvm heap size.
+		        LOG.info(String.format("Heap Size: %d", heapSize));
+		        
+		        LOG.info(String.format("Starting new disambiguator with path '%s'", matrixDataDir));
 				classLoaderDisambiguationFactory = new DisambiguatorFactory(
 						matrixDataDir);
 				LOG.debug("Done.");
@@ -61,28 +68,49 @@ public class IndexWikiMapper extends
 	protected void map(LongWritable key, WikipediaPage w, Context context)
 			throws IOException, InterruptedException {
 
+		JSONObjectWritable document = processWikipediaPageToDocument(key, w);
+		if (document == null) { 
+			return;
+		}
+		
+		try {
+			context.write(new Text(document.getString("title")), document);
+		} catch (JSONException e) {
+			throw new RuntimeException(String.format(
+					"Could not process wikipedia article '%s' due to an error",
+					w.getTitle()), e);
+		}
+	}
+
+	public JSONObjectWritable processWikipediaPageToDocument(LongWritable key,
+			WikipediaPage wikipediaPage) {
+		
+		if (!wikipediaPage.isArticle()) {
+			return null;
+		}
+		
 		Article article = null;
 		String articleText = null;
 
-		article = new Article(key.get(), w.getTitle(), w.getWikiMarkup());
+		article = new Article(key.get(), wikipediaPage.getTitle(), wikipediaPage.getWikiMarkup());
 
 		articleText = getArticleRenderer().renderAsText(article);
 
 		SentenceDisambiguationResult[] result = getDisambiguator()
 				.disambiguateText(articleText, 3, false, true, false);
 
+		JSONObjectWritable document = new JSONObjectWritable();
 		try {
-			JSONObjectWritable document = new JSONObjectWritable();
 
 			document.put("title", article.getTitle());
 			document.put("content", articleText);
 
-			context.write(new Text(article.getTitle()), document);
 		} catch (Exception e) {
 			throw new RuntimeException(String.format(
 					"Could not process wikipedia article '%s' due to an error",
 					article.getTitle()), e);
 		}
+		return document;
 	}
 
 	public ArticleRenderer getArticleRenderer() {

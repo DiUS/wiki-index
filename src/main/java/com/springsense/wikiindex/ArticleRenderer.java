@@ -45,6 +45,10 @@ public class ArticleRenderer {
 		PageTitle pageTitle = null;
 		PageId pageId = null;
 		CompiledPage cp = null;
+		
+		if ((wikitext == null) || (wikitext.length() <= 0)) {
+			return "";
+		}
 
 		TextConverter p = null;
 		try {
@@ -58,7 +62,7 @@ public class ArticleRenderer {
 			cp = getCompiler().postprocess(pageId, wikitext, null);
 		} catch (CompilerException e) {
 			throw new RuntimeException(
-					"Problem rendering article due to an error", e);
+					String.format("Problem rendering article due to an error. Wikitext follows:\n----\n%s\n----\n", wikitext), e);
 		}
 
 		p = new TextConverter(getConfig(), 80);
