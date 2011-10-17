@@ -42,7 +42,8 @@ define "wiki-index" do
   JUNIT4 = artifact("junit:junit:jar:4.8.2")
   HAMCREST = artifact("org.hamcrest:hamcrest-core:jar:1.2.1")
   MOCKITO = artifact("org.mockito:mockito-all:jar:1.8.5")
-  MAP_REDUCE_UNIT = artifact("com.cloudera.hadoop:hadoop-mrunit:jar:0.20.2-737")
+#  MAP_REDUCE_UNIT = artifact("com.cloudera.hadoop:hadoop-mrunit:jar:0.20.2-737")
+  MAP_REDUCE_UNIT = artifact("org.apache.mrunit:mrunit:jar:0.5.0-incubating")
        
   compile.with GUAVA, JACKSON, HADOOP, CLOUD9, BLIKI, DISAMBIGJ, WIKITEXT, LOG4J, COMMONS_IO
   test.compile.with JUNIT4, HAMCREST, MOCKITO, MAP_REDUCE_UNIT
@@ -68,12 +69,32 @@ end
 
 task 'wiki-index:hadoop-job-jars' => jar_dependencies(project('wiki-index').package, project('wiki-index').compile.dependencies)
 
-file "target/wiki-index-hadoop-job-#{project('wiki-index').version}.jar" => [ 'wiki-index:hadoop-job-jars' ] do
+def hadoop_job_jar_filename
+  "target/wiki-index-hadoop-job-#{project('wiki-index').version}.jar"
+end
+
+file hadoop_job_jar_filename => [ 'wiki-index:hadoop-job-jars' ] do
   puts "Packaging 'target/wiki-index-hadoop-job-#{project('wiki-index').version}.jar'..."
   FileUtils.cd 'target/hadoop-job-jar' do | dir |
     puts `zip -r "../wiki-index-hadoop-job-#{project('wiki-index').version}.jar" *`
   end
 end
 
-task 'wiki-index:hadoop-job-jar' => "target/wiki-index-hadoop-job-#{project('wiki-index').version}.jar"
+task 'wiki-index:hadoop-job-jar' => hadoop_job_jar_filename
 
+def hadoop_dir
+  ENV['HADOOP_HOME']
+end
+
+def hadoop_cmd
+  "#{hadoop_dir}/bin/hadoop jar #{hadoop_job_jar_filename} com.springsense.wikiindex.IndexWikipedia -input target/test/resources/enwiki-20110901-pages-articles-small.xml -output target/result -matrixDir /media/matrix.data/current/this"
+end
+
+task 'wiki-index:test-run' => 'wiki-index:hadoop-job-jar' do
+  puts hadoop_dir
+  
+  rm_rf 'target/result'
+  
+  puts hadoop_cmd
+  puts `#{hadoop_cmd}`
+end
