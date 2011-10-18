@@ -68,7 +68,7 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 		}
 
 		try {
-			context.write(new Text(document.getString("title")), document);
+			context.write(new Text(document.getString("key")), document);
 		} catch (JSONException e) {
 			throw new RuntimeException(String.format("Could not process wikipedia article '%s' due to an error", w.getTitle()), e);
 		}

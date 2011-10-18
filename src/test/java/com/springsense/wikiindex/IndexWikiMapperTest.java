@@ -49,7 +49,7 @@ public class IndexWikiMapperTest extends java.lang.Object {
 	}
 
 	@Test()
-	public void mapperShouldOutputTheMappedDocumentWhenReturned() throws IOException, JSONException {
+	public void mapperShouldOutputTheMappedDocumentWithCorrectKeyWhenReturned() throws IOException, JSONException {
 		WikipediaPage page = loadTestWikipediaPage("test-article.xml");
 		driver.setInput(key, page);
 
@@ -61,9 +61,27 @@ public class IndexWikiMapperTest extends java.lang.Object {
 		JSONObjectWritable document = firstPair.getSecond();
 
 		assertThat(firstPair.getFirst(), equalTo(new Text("Red Army invasion of Azerbaijan")));
-		assertThat((String)document.get("key"), equalTo("Red Army invasion of Azerbaijan"));
-		assertThat((String)document.get("title"), equalTo("Red Army invasion of Azerbaijan"));
-		assertThat(loadTestResourceAsString("test-article-red-army-invasion.text"), equalTo(document.get("content")));
+		assertThat((String) document.get("key"), equalTo("Red Army invasion of Azerbaijan"));
+		assertThat((String) document.get("title"), equalTo("Red Army invasion of Azerbaijan"));
+		assertThat((String) document.get("content"), equalTo(loadTestResourceAsString("test-article-red-army-invasion.text")));
+	}
+
+	@Test()
+	public void mapperShouldOutputTheMappedDocumentWithCorrectKeyWhenIsRedirect() throws IOException, JSONException {
+		WikipediaPage page = loadTestWikipediaPage("test-redirect-article.xml");
+		driver.setInput(key, page);
+
+		List<Pair<Text, JSONObjectWritable>> output = driver.run();
+
+		assertThat(output.size(), equalTo(1));
+
+		Pair<Text, JSONObjectWritable> firstPair = output.get(0);
+		JSONObjectWritable document = firstPair.getSecond();
+
+		assertThat(firstPair.getFirst(), equalTo(new Text((String) document.get("key"))));
+		assertThat((String) document.get("key"), equalTo("Batman: Arkham City (comics)"));
+		assertThat((String) document.get("title"), equalTo("Batman: Arkham City (comic book)"));
+		assertThat(document.opt("content"), nullValue());
 	}
 
 	@Test()
@@ -80,9 +98,9 @@ public class IndexWikiMapperTest extends java.lang.Object {
 	public void processWikipediaPageToDocumentShouldProcessNormalArticleCorrectly() throws Exception {
 		JSONObjectWritable document = mapper.processWikipediaPageToDocument(key, loadTestWikipediaPage("test-article.xml"));
 
-		assertThat((String)document.get("key"), equalTo("Red Army invasion of Azerbaijan"));
-		assertThat((String)document.get("title"), equalTo("Red Army invasion of Azerbaijan"));
-		assertThat((String)document.get("content"), equalTo(loadTestResourceAsString("test-article-red-army-invasion.text")));
+		assertThat((String) document.get("key"), equalTo("Red Army invasion of Azerbaijan"));
+		assertThat((String) document.get("title"), equalTo("Red Army invasion of Azerbaijan"));
+		assertThat((String) document.get("content"), equalTo(loadTestResourceAsString("test-article-red-army-invasion.text")));
 
 		verify(this.mockDisambiguator).disambiguateText(loadTestResourceAsString("test-article-red-army-invasion.text"), 3, false, true, false);
 	}
