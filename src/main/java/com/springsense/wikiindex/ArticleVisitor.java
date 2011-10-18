@@ -1,7 +1,5 @@
-//   Generated from TextConverter.mirah
-package org.sweble.wikitext.engine.utils;
-
 /**
+ * Based on org.sweble.wikitext.engine.utils.TextConverter
  * Copyright 2011 The Open Source Research Group,
  *                University of Erlangen-NŸrnberg
  *
@@ -18,11 +16,15 @@ package org.sweble.wikitext.engine.utils;
  * limitations under the License.
  */
 
+package com.springsense.wikiindex;
+
 import java.util.LinkedList;
 import java.util.regex.Pattern;
 
 import org.sweble.wikitext.engine.Page;
 import org.sweble.wikitext.engine.PageTitle;
+import org.sweble.wikitext.engine.utils.EntityReferences;
+import org.sweble.wikitext.engine.utils.SimpleWikiConfiguration;
 import org.sweble.wikitext.lazy.LinkTargetException;
 import org.sweble.wikitext.lazy.encval.IllegalCodePoint;
 import org.sweble.wikitext.lazy.parser.Bold;
@@ -37,6 +39,7 @@ import org.sweble.wikitext.lazy.parser.Section;
 import org.sweble.wikitext.lazy.parser.Url;
 import org.sweble.wikitext.lazy.parser.Whitespace;
 import org.sweble.wikitext.lazy.parser.XmlElement;
+import org.sweble.wikitext.lazy.preprocessor.Redirect;
 import org.sweble.wikitext.lazy.preprocessor.TagExtension;
 import org.sweble.wikitext.lazy.preprocessor.Template;
 import org.sweble.wikitext.lazy.preprocessor.TemplateArgument;
@@ -74,7 +77,7 @@ import de.fau.cs.osr.utils.StringUtils;
  * value of the call to <code>visit(c)</code>.</li>
  * </ul>
  */
-public class TextConverter extends Visitor {
+public class ArticleVisitor extends Visitor {
 	private static final Pattern ws = Pattern.compile("\\s+");
 
 	private final SimpleWikiConfiguration config;
@@ -97,9 +100,12 @@ public class TextConverter extends Visitor {
 
 	private LinkedList<Integer> sections;
 
+	private Article article;
+
 	// =========================================================================
 
-	public TextConverter(SimpleWikiConfiguration config, int wrapCol) {
+	public ArticleVisitor(Article article, SimpleWikiConfiguration config, int wrapCol) {
+		this.article = article;
 		this.config = config;
 		this.wrapCol = wrapCol;
 	}
@@ -135,10 +141,19 @@ public class TextConverter extends Visitor {
 		write(" />");
 	}
 
+	public void visit(Redirect redirect) {
+		write("<span class='redirect'>");
+		write(redirect.getTarget());
+		write("</span>");
+		
+		article.setRedirect(true);
+		article.setRedirectTarget(redirect.getTarget());
+	}
+
 	public void visit(org.sweble.wikitext.lazy.parser.SemiPre s) {
 		iterate(s);
 	}
-
+	
 	public void visit(org.sweble.wikitext.lazy.parser.SemiPreLine l) {
 		iterate(l.getContent());
 		newline(1);
@@ -214,8 +229,7 @@ public class TextConverter extends Visitor {
 		}
 
 		write(link.getPrefix());
-		if (link.getTitle().getContent() == null
-				|| link.getTitle().getContent().isEmpty()) {
+		if (link.getTitle().getContent() == null || link.getTitle().getContent().isEmpty()) {
 			write(link.getTarget());
 		} else {
 			iterate(link.getTitle());

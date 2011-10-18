@@ -1,5 +1,6 @@
 package com.springsense.wikiindex;
 
+import static com.springsense.wikiindex.TestUtils.*;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
@@ -14,7 +15,6 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mrunit.mapreduce.MapDriver;
 import org.apache.hadoop.mrunit.types.Pair;
-import org.hamcrest.core.IsNull;
 import org.json.JSONException;
 import org.junit.Before;
 import org.junit.Test;
@@ -61,28 +61,39 @@ public class IndexWikiMapperTest extends java.lang.Object {
 		JSONObjectWritable document = firstPair.getSecond();
 
 		assertThat(firstPair.getFirst(), equalTo(new Text("Red Army invasion of Azerbaijan")));
-		assertThat("Red Army invasion of Azerbaijan", equalTo(document.get("title")));
-		assertThat(loadTestResourceAsString("test-article-red-army.wikitext"), equalTo(document.get("content")));
+		assertThat((String)document.get("key"), equalTo("Red Army invasion of Azerbaijan"));
+		assertThat((String)document.get("title"), equalTo("Red Army invasion of Azerbaijan"));
+		assertThat(loadTestResourceAsString("test-article-red-army-invasion.text"), equalTo(document.get("content")));
 	}
 
 	@Test()
 	public void mapperShouldNotHaveOutputForUnprocessedDocuments() throws IOException, JSONException {
 		WikipediaPage page = loadTestWikipediaPage("test-template-article.xml");
 		driver.setInput(key, page);
-		
+
 		List<Pair<Text, JSONObjectWritable>> output = driver.run();
-		
+
 		assertThat(output.size(), equalTo(0));
 	}
-	
+
 	@Test
 	public void processWikipediaPageToDocumentShouldProcessNormalArticleCorrectly() throws Exception {
 		JSONObjectWritable document = mapper.processWikipediaPageToDocument(key, loadTestWikipediaPage("test-article.xml"));
 
-		assertThat("Red Army invasion of Azerbaijan", equalTo(document.get("title")));
-		assertThat(loadTestResourceAsString("test-article-red-army.wikitext"), equalTo(document.get("content")));
+		assertThat((String)document.get("key"), equalTo("Red Army invasion of Azerbaijan"));
+		assertThat((String)document.get("title"), equalTo("Red Army invasion of Azerbaijan"));
+		assertThat((String)document.get("content"), equalTo(loadTestResourceAsString("test-article-red-army-invasion.text")));
 
-		verify(this.mockDisambiguator).disambiguateText(loadTestResourceAsString("test-article-red-army.wikitext"), 3, false, true, false);
+		verify(this.mockDisambiguator).disambiguateText(loadTestResourceAsString("test-article-red-army-invasion.text"), 3, false, true, false);
+	}
+
+	@Test
+	public void processWikipediaPageToDocumentShouldProcessRedirectArticleCorrectly() throws Exception {
+		JSONObjectWritable document = mapper.processWikipediaPageToDocument(key, loadTestWikipediaPage("test-redirect-article.xml"));
+
+		assertThat((String) document.get("key"), equalTo("Batman: Arkham City (comics)"));
+		assertThat((String) document.get("title"), equalTo("Batman: Arkham City (comic book)"));
+		assertThat(document.opt("content"), nullValue());
 	}
 
 	@Test
@@ -95,17 +106,8 @@ public class IndexWikiMapperTest extends java.lang.Object {
 	@Test
 	public void processWikipediaPageToDocumentShouldReturnNullForFileArticle() throws Exception {
 		JSONObjectWritable document = mapper.processWikipediaPageToDocument(key, loadTestWikipediaPage("test-file-article.xml"));
-		
+
 		assertThat(document, nullValue());
 	}
 
-	protected WikipediaPage loadTestWikipediaPage(String pageXmlFilename) throws IOException {
-		WikipediaPage page = new WikipediaPage();
-		WikipediaPage.readPage(page, loadTestResourceAsString(pageXmlFilename));
-		return page;
-	}
-
-	protected String loadTestResourceAsString(String testResourceName) throws IOException {
-		return IOUtils.toString(this.getClass().getClassLoader().getResourceAsStream(testResourceName));
-	}
 }

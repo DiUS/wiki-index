@@ -6,10 +6,9 @@ import org.sweble.wikitext.engine.CompilerException;
 import org.sweble.wikitext.engine.PageId;
 import org.sweble.wikitext.engine.PageTitle;
 import org.sweble.wikitext.engine.utils.SimpleWikiConfiguration;
-import org.sweble.wikitext.engine.utils.TextConverter;
 import org.sweble.wikitext.lazy.LinkTargetException;
 
-public class ArticleRenderer {
+public class ArticleAnnotator {
 
 	private SimpleWikiConfiguration config;
 	private Compiler compiler;
@@ -36,37 +35,32 @@ public class ArticleRenderer {
 		}
 	}
 
-	public String renderAsText(Article article) {
-		return renderAsText(article.id(), article.getTitle(),
-				article.getWikitext());
-	}
-
-	public String renderAsText(long id, String title, String wikitext) {
+	public void annotate(Article article) {
+		String wikitext = article.getWikitext();
 		PageTitle pageTitle = null;
 		PageId pageId = null;
 		CompiledPage cp = null;
 		
 		if ((wikitext == null) || (wikitext.length() <= 0)) {
-			return "";
+			return;
 		}
-
-		TextConverter p = null;
+		
 		try {
-			pageTitle = PageTitle.make(getConfig(), title);
+			pageTitle = PageTitle.make(getConfig(), article.getTitle());
 		} catch (LinkTargetException e) {
 			throw new RuntimeException(
-					"Problem rendering article due to an error", e);
+					"Problem annotating article due to an error", e);
 		}
-		pageId = new PageId(pageTitle, id);
+		pageId = new PageId(pageTitle, article.id());
 		try {
 			cp = getCompiler().postprocess(pageId, wikitext, null);
 		} catch (CompilerException e) {
 			throw new RuntimeException(
-					String.format("Problem rendering article due to an error. Wikitext follows:\n----\n%s\n----\n", wikitext), e);
+					String.format("Problem annotating article due to an error. Wikitext follows:\n----\n%s\n----\n", wikitext), e);
 		}
-
-		p = new TextConverter(getConfig(), 80);
-
-		return p.go(cp.getPage()).toString();
+		
+		ArticleVisitor visitor = new ArticleVisitor(article, getConfig(), 80);
+		
+		article.setText(visitor.go(cp.getPage()).toString());
 	}
 }
