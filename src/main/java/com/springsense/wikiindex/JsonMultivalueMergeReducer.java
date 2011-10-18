@@ -45,6 +45,10 @@ public class JsonMultivalueMergeReducer extends
 		if (rightHand == null) {
 			return leftHand;
 		}
+		
+		if (leftHand.toString().equals(rightHand.toString())) {
+			return leftHand;
+		}
 
 		if ((leftHand instanceof JSONObject)
 				&& (rightHand instanceof JSONObject)) {
@@ -78,6 +82,10 @@ public class JsonMultivalueMergeReducer extends
 		int leftLength = leftHand.length();
 		for (int i = 0; i < leftLength; i++) {
 			mergedArray.put(leftHand.get(i));
+		}
+		
+		if (leftHand.toString().equals(rightHand.toString())) {
+			return mergedArray;
 		}
 
 		int rightLength = rightHand.length();

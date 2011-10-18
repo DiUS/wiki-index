@@ -58,16 +58,16 @@ public class JsonMultivalueMergeReducerTest {
 	@Test
 	public void mergeShouldMergeJsonCorrectlySimple() throws JSONException {
 		JSONObject left = new JSONObject(
-				"{\"letters\":\"alpha\",\"obj\":{\"one\":1},\"array\":[1,2,3]}");
+				"{\"key\":\"same\",\"letters\":\"alpha\",\"obj\":{\"one\":1},\"array\":[1,2,3]}");
 		JSONObject right = new JSONObject(
-				"{\"letters\":\"beta\",\"obj\":{\"two\":2},\"array\":[4,5,6]}");
+				"{\"key\":\"same\",\"letters\":\"beta\",\"obj\":{\"two\":2},\"array\":[4,5,6]}");
 
 		JSONObject result = JsonMultivalueMergeReducer.mergeIntoLeft(left,
 				right);
 
 		assertThat(
 				result.toString(),
-				equalTo("{\"obj\":{\"two\":2,\"one\":1},\"letters\":[\"alpha\",\"beta\"],\"array\":[1,2,3,4,5,6]}"));
+				equalTo("{\"obj\":{\"two\":2,\"one\":1},\"letters\":[\"alpha\",\"beta\"],\"key\":\"same\",\"array\":[1,2,3,4,5,6]}"));
 	}
 
 	@Test

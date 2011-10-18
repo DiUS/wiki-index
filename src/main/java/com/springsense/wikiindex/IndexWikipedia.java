@@ -81,7 +81,7 @@ public class IndexWikipedia extends Configured implements Tool {
 				inputPath, OUTPUT_OPTION, outputPath, MATRIX_DIR_OPTION,
 				matrixDir));
 
-		job.setNumReduceTasks(0);
+		//job.setNumReduceTasks(0);
 
 		FileInputFormat.setInputPaths(job, new Path(inputPath));
 		FileOutputFormat.setOutputPath(job, new Path(outputPath));
