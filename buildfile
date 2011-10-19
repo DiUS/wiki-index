@@ -35,14 +35,13 @@ define "wiki-index" do
   GUAVA = artifact('com.google.guava:guava:jar:r09')
   JACKSON = artifact('org.codehaus.jackson:jackson-core-asl:jar:1.8.5')
   
-  DISAMBIGJ = artifact("com.springsense:disambigj:jar:2.0.0.51")
+  DISAMBIGJ = artifact("com.springsense:disambigj:jar:2.0.1.58")
   WIKITEXT = artifact("org.sweble.wikitext:swc-engine:jar:1.0.0")
   COMMONS_IO = artifact("commons-io:commons-io:jar:2.0.1")
 
   JUNIT4 = artifact("junit:junit:jar:4.8.2")
   HAMCREST = artifact("org.hamcrest:hamcrest-core:jar:1.2.1")
   MOCKITO = artifact("org.mockito:mockito-all:jar:1.8.5")
-#  MAP_REDUCE_UNIT = artifact("com.cloudera.hadoop:hadoop-mrunit:jar:0.20.2-737")
   MAP_REDUCE_UNIT = artifact("org.apache.mrunit:mrunit:jar:0.5.0-incubating")
        
   compile.with GUAVA, JACKSON, HADOOP, CLOUD9, BLIKI, DISAMBIGJ, WIKITEXT, LOG4J, COMMONS_IO

@@ -1,6 +1,8 @@
 package com.springsense.wikiindex;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.io.LongWritable;
@@ -9,6 +11,8 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.log4j.Logger;
 import org.json.JSONException;
 
+import com.springsense.disambig.DisambiguationResult;
+import com.springsense.disambig.DisambiguationResult.Sentence;
 import com.springsense.disambig.Disambiguator;
 import com.springsense.disambig.DisambiguatorFactory;
 import com.springsense.disambig.SentenceDisambiguationResult;
@@ -82,9 +86,11 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 
 		Article article = new Article(key.get(), wikipediaPage);
 		getArticleAnnotator().annotate(article);
-		
+
 		String articleText = article.getText();
-		SentenceDisambiguationResult[] result = getDisambiguator().disambiguateText(articleText, 3, false, true, false);
+
+		DisambiguationResult resultAsApi = disambiguate(articleText);
+		resultAsApi.toString();
 
 		JSONObjectWritable document = new JSONObjectWritable();
 		try {
@@ -103,6 +109,20 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 		return document;
 	}
 
+	protected DisambiguationResult disambiguate(String text) {
+		SentenceDisambiguationResult[] result = getDisambiguator().disambiguateText(text, 3, false, true, false);
+
+		List<Sentence> sentences = new ArrayList<Sentence>(result == null ? 0 : result.length);
+		if (result != null) {
+			for (SentenceDisambiguationResult taggedSentence : result) {
+				sentences.add(taggedSentence.toApiView());
+			}
+		}
+
+		DisambiguationResult resultAsApi = new DisambiguationResult(sentences);
+		return resultAsApi;
+	}
+
 	public ArticleAnnotator getArticleAnnotator() {
 		if ((articleAnnotator != null)) {
 			return articleAnnotator;
@@ -112,7 +132,7 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 	}
 
 	public Disambiguator getDisambiguator() {
-		return ((com.springsense.disambig.Disambiguator) (this.getDisambiguatorStore().get()));
+		return ((Disambiguator) (this.getDisambiguatorStore().get()));
 	}
 
 	public ThreadLocal<Disambiguator> getDisambiguatorStore() {
