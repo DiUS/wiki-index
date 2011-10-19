@@ -59,7 +59,7 @@ public class ArticleAnnotator {
 					String.format("Problem annotating article due to an error. Wikitext follows:\n----\n%s\n----\n", wikitext), e);
 		}
 		
-		ArticleVisitor visitor = new ArticleVisitor(article, getConfig(), 80);
+		ArticleVisitor visitor = new ArticleVisitor(article, getConfig(), 1024);
 		
 		article.setText(visitor.go(cp.getPage()).toString());
 	}

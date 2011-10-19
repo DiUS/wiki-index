@@ -25,7 +25,7 @@ public class ArticleAnnotatorTest {
 		articleRenderer.annotate(article);
 		String renderedText = article.getText();
 		
-		assertThat(renderedText, equalTo(loadTestResourceAsString("test-article-red-army-invasion.text")));
+		assertThat(renderedText.replaceAll("\\s", ""), equalTo(loadTestResourceAsString("test-article-red-army-invasion.text").replaceAll("\\s", "")));
 		assertThat(renderedText, not(containsString("<UNSUPPORTED")));
 	}
 

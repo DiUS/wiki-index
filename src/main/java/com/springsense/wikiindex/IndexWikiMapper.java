@@ -2,6 +2,7 @@ package com.springsense.wikiindex;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
@@ -9,10 +10,13 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.log4j.Logger;
+import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONString;
 
 import com.springsense.disambig.DisambiguationResult;
 import com.springsense.disambig.DisambiguationResult.Sentence;
+import com.springsense.disambig.DisambiguationResult.Variant;
 import com.springsense.disambig.Disambiguator;
 import com.springsense.disambig.DisambiguatorFactory;
 import com.springsense.disambig.SentenceDisambiguationResult;
@@ -89,9 +93,6 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 
 		String articleText = article.getText();
 
-		DisambiguationResult resultAsApi = disambiguate(articleText);
-		resultAsApi.toString();
-
 		JSONObjectWritable document = new JSONObjectWritable();
 		try {
 
@@ -103,15 +104,52 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 				document.remove("content");
 			}
 
+			disambiguateAndStore(document, "title");
+			disambiguateAndStore(document, "content");
 		} catch (Exception e) {
 			throw new RuntimeException(String.format("Could not process wikipedia article '%s' due to an error", article.getTitle()), e);
 		}
 		return document;
 	}
 
-	protected DisambiguationResult disambiguate(String text) {
-		SentenceDisambiguationResult[] result = getDisambiguator().disambiguateText(text, 3, false, true, false);
+	protected void disambiguateAndStore(JSONObjectWritable document, String fieldName) throws JSONException {
+		Object fieldValue = document.opt(fieldName);
+		if (fieldValue == null) {
+			return;
+		}
 
+		String springSenseRawFieldName = String.format("springsense.%s.raw", fieldName);
+		String springSenseTextFieldName = String.format("springsense.%s.text", fieldName);
+
+		List<String> values = new LinkedList<String>();
+
+		if (fieldValue instanceof JSONArray) {
+			JSONArray asArray = ((JSONArray) fieldValue);
+
+			int asArrayLength = asArray.length();
+			for (int i = 0; i < asArrayLength; i++) {
+				values.add(asArray.get(i).toString());
+			}
+		} else {
+			values.add(fieldValue.toString());
+		}
+
+		for (String value : values) {
+			SentenceDisambiguationResult[] result = getDisambiguator().disambiguateText(value, 3, false, true, false);
+			DisambiguationResult resultAsApi = convertToApiView(result);
+
+			document.append(springSenseRawFieldName, new EmbeddedDisambiguationResult(result));
+
+			int i = 0;
+			List<Variant> variants = resultAsApi.getVariants();
+			for (Variant variant : variants) {
+				document.append(String.format("%s.%d", springSenseTextFieldName, i), variant.toString());
+				i++;
+			}
+		}
+	}
+
+	protected DisambiguationResult convertToApiView(SentenceDisambiguationResult[] result) {
 		List<Sentence> sentences = new ArrayList<Sentence>(result == null ? 0 : result.length);
 		if (result != null) {
 			for (SentenceDisambiguationResult taggedSentence : result) {
