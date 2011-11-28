@@ -30,6 +30,78 @@ public class ArticleAnnotatorTest {
 	}
 
 	@Test()
+	public void testTextShouldReturnArticleContentWithDefinitionListAsTextCorrectly() throws IOException {
+		Article article = new Article(-1, loadTestWikipediaPage("test-article-transportation-in-angola.xml"));
+		
+		articleRenderer.annotate(article);
+		String renderedText = article.getText();
+
+		assertThat(renderedText, not(containsString("<UNSUPPORTED")));
+	}
+
+	@Test()
+	public void testTextShouldReturnArticleContentWithXmlElementsAsTextCorrectly() throws IOException {
+		Article article = new Article(-1, loadTestWikipediaPage("test-article-abacus.xml"));
+		
+		System.out.println(article.getWikitext());
+
+		articleRenderer.annotate(article);
+		String renderedText = article.getText();
+		
+		assertThat(renderedText, not(containsString("<UNSUPPORTED")));
+	}
+	
+	@Test()
+	public void testTextShouldReturnArticleContentWithDefinitionTermAsTextCorrectly() throws IOException {
+		Article article = new Article(-1, loadTestWikipediaPage("test-article-aberdeen.xml"));
+		
+		articleRenderer.annotate(article);
+		String renderedText = article.getText();
+		
+		assertThat(renderedText, not(containsString("<UNSUPPORTED")));
+	}
+	
+	@Test()
+	public void testTextShouldReturnArticleContentWithXmlAttrGarbageAsTextCorrectly() throws IOException {
+		Article article = new Article(-1, loadTestWikipediaPage("test-article-adventure.xml"));
+		
+		articleRenderer.annotate(article);
+		String renderedText = article.getText();
+		
+		assertThat(renderedText, not(containsString("<UNSUPPORTED")));
+	}
+	
+	@Test()
+	public void testTextShouldReturnArticleContentWithEnumerationAsTextCorrectly() throws IOException {
+		Article article = new Article(-1, loadTestWikipediaPage("test-article-aegean-sea.xml"));
+		
+		articleRenderer.annotate(article);
+		String renderedText = article.getText();
+		
+		assertThat(renderedText, not(containsString("<UNSUPPORTED")));
+	}
+	
+	@Test()
+	public void testTextShouldReturnArticleContentWithTableAsTextCorrectly() throws IOException {
+		Article article = new Article(-1, loadTestWikipediaPage("test-article-the-letter-a.xml"));
+		
+		articleRenderer.annotate(article);
+		String renderedText = article.getText();
+		
+		assertThat(renderedText, not(containsString("<UNSUPPORTED")));
+	}
+
+	@Test()
+	public void testTextShouldReturnArticleContentWithTable2AsTextCorrectly() throws IOException {
+		Article article = new Article(-1, loadTestWikipediaPage("test-article-albedo.xml"));
+		
+		articleRenderer.annotate(article);
+		String renderedText = article.getText();
+		
+		assertThat(renderedText, not(containsString("<UNSUPPORTED")));
+	}
+	
+	@Test()
 	public void testTextShouldReturnRedirectArticleContentAsTextCorrectly() throws IOException {
 		Article article = new Article(-1, loadTestWikipediaPage("test-redirect-article.xml"));
 		

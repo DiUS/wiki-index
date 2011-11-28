@@ -39,12 +39,17 @@ import org.sweble.wikitext.lazy.parser.Section;
 import org.sweble.wikitext.lazy.parser.Url;
 import org.sweble.wikitext.lazy.parser.Whitespace;
 import org.sweble.wikitext.lazy.parser.XmlElement;
+import org.sweble.wikitext.lazy.parser.XmlElementClose;
+import org.sweble.wikitext.lazy.parser.XmlElementEmpty;
+import org.sweble.wikitext.lazy.parser.XmlElementOpen;
 import org.sweble.wikitext.lazy.preprocessor.Redirect;
 import org.sweble.wikitext.lazy.preprocessor.TagExtension;
 import org.sweble.wikitext.lazy.preprocessor.Template;
 import org.sweble.wikitext.lazy.preprocessor.TemplateArgument;
 import org.sweble.wikitext.lazy.preprocessor.TemplateParameter;
 import org.sweble.wikitext.lazy.preprocessor.XmlComment;
+import org.sweble.wikitext.lazy.utils.XmlAttribute;
+import org.sweble.wikitext.lazy.utils.XmlAttributeGarbage;
 import org.sweble.wikitext.lazy.utils.XmlCharRef;
 import org.sweble.wikitext.lazy.utils.XmlEntityRef;
 
@@ -138,6 +143,8 @@ public class ArticleVisitor extends Visitor {
 	public void visit(de.fau.cs.osr.ptk.common.ast.AstNode n) {
 		write("<UNSUPPORTED ");
 		write(n.getNodeName());
+		write(" ");
+		iterate(n);
 		write(" />");
 	}
 
@@ -154,9 +161,72 @@ public class ArticleVisitor extends Visitor {
 		iterate(s);
 	}
 	
+	public void visit(org.sweble.wikitext.lazy.parser.DefinitionList d) {
+		iterate(d);
+		newline(1);
+	}
+	
+	public void visit(org.sweble.wikitext.lazy.parser.DefinitionDefinition d) {
+		iterate(d.getContent());
+		iterate(d);
+	}
+	
+	public void visit(org.sweble.wikitext.lazy.parser.DefinitionTerm d) {
+		iterate(d);
+	}
+	
+	public void visit(XmlAttribute attr) {
+		// Ignore xml attribute as we're rendering to text.
+	}
+	
+	public void visit(XmlAttributeGarbage attr) {
+		// Ignore xml attribute as we're rendering to text.
+	}
+	
+	public void visit(XmlElementEmpty attr) {
+		// Ignore xml attribute as we're rendering to text.
+	}
+	
+	public void visit(XmlElementOpen open) {
+		// Ignore xml element open as we're rendering to text.
+	}
+	
+	public void visit(XmlElementClose close) {
+		// Ignore xml element close as we're rendering to text.
+	}
+	
 	public void visit(org.sweble.wikitext.lazy.parser.SemiPreLine l) {
 		iterate(l.getContent());
 		newline(1);
+	}
+
+	public void visit(org.sweble.wikitext.lazy.parser.TableCaption tableCaption) {
+		iterate(tableCaption);
+		newline(1);
+	}
+	
+	public void visit(org.sweble.wikitext.lazy.parser.TableRow tableRow) {
+		write("|");
+		iterate(tableRow);
+		write("||");
+		newline(1);
+	}
+
+	public void visit(org.sweble.wikitext.lazy.parser.TableCell tableCell) {
+		write("|\t");
+		iterate(tableCell);
+		write("\t");
+	}
+
+	public void visit(org.sweble.wikitext.lazy.parser.TableHeader tableHeader) {
+		write("|\t");
+		iterate(tableHeader);
+		write("\t");
+	}
+
+	public void visit(org.sweble.wikitext.lazy.parser.Table table) {
+		iterate(table.getBody());
+		newline(2);
 	}
 
 	public void visit(org.sweble.wikitext.lazy.parser.Itemization i) {
@@ -164,6 +234,18 @@ public class ArticleVisitor extends Visitor {
 	}
 
 	public void visit(org.sweble.wikitext.lazy.parser.ItemizationItem i) {
+		write("\t* ");
+		iterate(i.getContent());
+		newline(1);
+	}
+
+	public void visit(org.sweble.wikitext.lazy.parser.Enumeration i) {
+		newline(2);
+		iterate(i);
+		newline(2);
+	}
+
+	public void visit(org.sweble.wikitext.lazy.parser.EnumerationItem i) {
 		write("\t* ");
 		iterate(i.getContent());
 		newline(1);
@@ -289,7 +371,7 @@ public class ArticleVisitor extends Visitor {
 
 	public void visit(Paragraph p) {
 		iterate(p.getContent());
-		newline(2);
+		//newline(2);
 	}
 
 	public void visit(HorizontalRule hr) {
@@ -300,7 +382,7 @@ public class ArticleVisitor extends Visitor {
 
 	public void visit(XmlElement e) {
 		if (e.getName().equalsIgnoreCase("br")) {
-			newline(1);
+			//newline(1);
 		} else {
 			iterate(e.getBody());
 		}
@@ -310,6 +392,7 @@ public class ArticleVisitor extends Visitor {
 	// Stuff we want to hide
 
 	public void visit(ImageLink n) {
+		iterate(n.getTitle());
 	}
 
 	public void visit(IllegalCodePoint n) {

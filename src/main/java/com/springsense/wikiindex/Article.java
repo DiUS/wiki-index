@@ -1,5 +1,7 @@
 package com.springsense.wikiindex;
 
+import org.apache.commons.lang.StringEscapeUtils;
+
 import edu.umd.cloud9.collection.wikipedia.WikipediaPage;
 
 public class Article {
@@ -17,7 +19,7 @@ public class Article {
 		this.id = id;
 		this.wikipediaPage = wikipediaPage;
 		this.title = wikipediaPage.getTitle();
-		this.wikitext = wikipediaPage.getWikiMarkup();
+		this.wikitext = StringEscapeUtils.unescapeHtml(wikipediaPage.getWikiMarkup());
 		this.text = null;
 		this.isRedirect = wikipediaPage.isRedirect();
 	}

@@ -86,7 +86,7 @@ def hadoop_dir
 end
 
 def hadoop_cmd
-  "#{hadoop_dir}/bin/hadoop jar #{hadoop_job_jar_filename} com.springsense.wikiindex.IndexWikipedia -input target/test/resources/enwiki-20110901-pages-articles-small.xml -output target/result -matrixDir /media/matrix.data/current/this"
+  "#{hadoop_dir}/bin/hadoop jar #{hadoop_job_jar_filename} com.springsense.wikiindex.IndexWikipedia -input target/test/resources/enwiki-20110901-pages-articles-medium.xml -output target/result -matrixDir /media/matrix.data/current/this"
 end
 
 task 'wiki-index:test-run' => 'wiki-index:hadoop-job-jar' do
