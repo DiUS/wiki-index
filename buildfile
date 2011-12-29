@@ -35,7 +35,7 @@ define "wiki-index" do
   GUAVA = artifact('com.google.guava:guava:jar:r09')
   JACKSON = artifact('org.codehaus.jackson:jackson-core-asl:jar:1.8.5')
   
-  DISAMBIGJ = artifact("com.springsense:disambigj:jar:2.0.1.58")
+  DISAMBIGJ = artifact("com.springsense:disambigj:jar:2.0.2.73")
   WIKITEXT = artifact("org.sweble.wikitext:swc-engine:jar:1.0.0")
   COMMONS_IO = artifact("commons-io:commons-io:jar:2.0.1")
 

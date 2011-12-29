@@ -43,7 +43,7 @@ public class ArticleAnnotatorTest {
 	public void testTextShouldReturnArticleContentWithXmlElementsAsTextCorrectly() throws IOException {
 		Article article = new Article(-1, loadTestWikipediaPage("test-article-abacus.xml"));
 		
-		System.out.println(article.getWikitext());
+		//System.out.println(article.getWikitext());
 
 		articleRenderer.annotate(article);
 		String renderedText = article.getText();

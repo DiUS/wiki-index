@@ -138,7 +138,7 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 			SentenceDisambiguationResult[] result = getDisambiguator().disambiguateText(value, 3, false, true, false);
 			DisambiguationResult resultAsApi = convertToApiView(result);
 
-			document.append(springSenseRawFieldName, new EmbeddedDisambiguationResult(result));
+			//document.append(springSenseRawFieldName, new EmbeddedDisambiguationResult(result));
 
 			int i = 0;
 			List<Variant> variants = resultAsApi.getVariants();
