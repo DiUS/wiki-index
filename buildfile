@@ -97,3 +97,29 @@ task 'wiki-index:test-run' => 'wiki-index:hadoop-job-jar' do
   puts hadoop_cmd
   puts `#{hadoop_cmd}`
 end
+
+task :upload_to_s3 => [ 'wiki-index:hadoop-job-jar' ] do
+  puts "About to upload to s3..."
+  run_command "s3cmd -v put target/#{hadoop_job_jar_filename} s3://springsense-releases/"
+  puts "Done uploading."
+end
+
+def run_command(cmd, io_prefix = "local:\t", use_last_line_for_exit = false)
+  puts "\tExecuting locally: '#{cmd}'"
+  last_line = "0"
+  IO.popen("#{cmd} 2>&1") do |f|
+    while line = f.gets do
+      puts "#{io_prefix}#{line}"
+      last_line = line
+    end
+  end
+
+  if use_last_line_for_exit then
+    return_value = last_line.to_i
+  else
+    result = $?
+    return_value = result.exitstatus
+  end
+
+  raise "Error while running command: '#{cmd}'..." unless return_value == 0
+end
