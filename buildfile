@@ -100,7 +100,7 @@ end
 
 task :upload_to_s3 => [ 'wiki-index:hadoop-job-jar' ] do
   puts "About to upload to s3..."
-  run_command "s3cmd -v put target/#{hadoop_job_jar_filename} s3://springsense-releases/"
+  run_command "s3cmd -v put #{hadoop_job_jar_filename} s3://springsense-releases/"
   puts "Done uploading."
 end
 
