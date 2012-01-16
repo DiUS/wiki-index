@@ -66,7 +66,38 @@ def jar_dependencies(*dependencies)
   end
 end
 
-task 'wiki-index:hadoop-job-jars' => jar_dependencies(project('wiki-index').package, project('wiki-index').compile.dependencies)
+def class_dependencies()
+  Dir.glob("target/classes/**/*").map do | source_class |
+    pathname = Pathname.new(source_class)
+    rel_class = pathname.relative_path_from(Pathname.new('target/classes')).to_s
+    target_path = "target/hadoop-job-jar/#{rel_class.to_s}"
+    if pathname.directory?
+      file rel_class do
+        puts "Creating '#{target_path}'..."
+        mkdir_p target_path
+      end
+    else
+      file target_path => [ 'target/hadoop-job-jar', source_class ] do
+        puts "'#{source_class.to_s}' -> '#{target_path}'"
+        cp source_class.to_s, target_path
+      end
+    end
+  end
+end
+
+def dependencies
+  deps = [] 
+    
+  deps.push(*project('wiki-index').package)
+  deps.push(*jar_dependencies(project('wiki-index').compile.dependencies))
+  deps.push(*class_dependencies)
+  
+  # puts "Deps:\n\t'#{deps.join("'\n\t'")}"
+  
+  deps
+end
+
+task 'wiki-index:hadoop-job-jars' => dependencies
 
 def hadoop_job_jar_filename
   "target/wiki-index-hadoop-job-#{project('wiki-index').version}.jar"
