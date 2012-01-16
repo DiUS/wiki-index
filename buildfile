@@ -73,12 +73,12 @@ def class_dependencies()
     target_path = "target/hadoop-job-jar/#{rel_class.to_s}"
     if pathname.directory?
       file rel_class do
-        puts "Creating '#{target_path}'..."
+        # puts "Creating '#{target_path}'..."
         mkdir_p target_path
       end
     else
       file target_path => [ 'target/hadoop-job-jar', source_class ] do
-        puts "'#{source_class.to_s}' -> '#{target_path}'"
+        # puts "'#{source_class.to_s}' -> '#{target_path}'"
         cp source_class.to_s, target_path
       end
     end
