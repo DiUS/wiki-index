@@ -2,15 +2,9 @@ package com.springsense.wikiindex;
 
 import static com.springsense.wikiindex.TestUtils.loadTestResourceAsString;
 import static com.springsense.wikiindex.TestUtils.loadTestWikipediaPage;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.*;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Matchers.anyObject;
-import static org.mockito.Mockito.doThrow;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 import java.io.IOException;
 import java.util.List;
@@ -30,9 +24,9 @@ import com.springsense.disambig.DisambiguatorFactory;
 import edu.umd.cloud9.collection.wikipedia.WikipediaPage;
 import edu.umd.cloud9.io.JSONObjectWritable;
 
-public class IndexWikiMapperTest extends java.lang.Object {
-	private DisambiguatorFactory mockDisambiguatorFactory;
-	private Disambiguator mockDisambiguator;
+public class IndexWikiMapperIntegrationTest extends java.lang.Object {
+	private DisambiguatorFactory disambiguatorFactory;
+	private Disambiguator disambiguator;
 
 	private IndexWikiMapper mapper;
 	private MapDriver<LongWritable, WikipediaPage, Text, JSONObjectWritable> driver;
@@ -41,11 +35,10 @@ public class IndexWikiMapperTest extends java.lang.Object {
 
 	@Before()
 	public void setUp() throws Exception {
-		mockDisambiguatorFactory = mock(DisambiguatorFactory.class);
-		mockDisambiguator = mock(Disambiguator.class);
-		when(mockDisambiguatorFactory.openNewDisambiguator()).thenReturn(mockDisambiguator);
+		disambiguatorFactory = new DisambiguatorFactory("/media/matrix.data/current/this");
+		disambiguator = disambiguatorFactory.openNewDisambiguator();
 
-		mapper = new IndexWikiMapper(mockDisambiguatorFactory);
+		mapper = new IndexWikiMapper(disambiguatorFactory);
 		driver = new MapDriver<LongWritable, WikipediaPage, Text, JSONObjectWritable>(mapper);
 
 		page = new WikipediaPage();
@@ -106,39 +99,18 @@ public class IndexWikiMapperTest extends java.lang.Object {
 		assertThat((String) document.get("key"), equalTo("Red Army invasion of Azerbaijan"));
 		assertThat((String) document.get("title"), equalTo("Red Army invasion of Azerbaijan"));
 		assertThat((String) document.get("content"), equalTo(loadTestResourceAsString("test-article-red-army-invasion.text")));
-
-		verify(this.mockDisambiguator).disambiguateText(loadTestResourceAsString("test-article-red-army-invasion.text"), 3, false, true, false);
 	}
 
 	@Test
-	public void processWikipediaPageToDocumentShouldProcessArticleWithAnnotateErrorCorrectly() throws Exception {
-		ArticleAnnotator failingArticleAnnotator = mock(ArticleAnnotator.class);
-		doThrow(new RuntimeException("Problem annotating article")).when(failingArticleAnnotator).annotate((Article)anyObject());
-		
-		mapper.setArticleAnnotator(failingArticleAnnotator);
-		
-		JSONObjectWritable document = mapper.processWikipediaPageToDocument(key, loadTestWikipediaPage("test-article-fscked.xml"));
-		
-		assertThat((String) document.get("errors"), containsString("Problem annotating article"));
-	}
-
-	@Test
-	public void processWikipediaPageToDocumentShouldProcessArticleWithDisambigErrorCorrectly() throws Exception {
-		String islamismText = loadTestResourceAsString("test-article-islamism.text");
-		when(this.mockDisambiguator.disambiguateText(islamismText, 3, false, true, false)).thenThrow(new RuntimeException("Error disambiguating text"));
-
+	public void processWikipediaPageToDocumentShouldProcessUndisambiguateableArticleCorrectly() throws Exception {
 		JSONObjectWritable document = mapper.processWikipediaPageToDocument(key, loadTestWikipediaPage("test-article-islamism.xml"));
-
-		verify(this.mockDisambiguator).disambiguateText("Islamism", 3, false, true, false);
-		verify(this.mockDisambiguator).disambiguateText(islamismText, 3, false, true, false);
 		
 		assertThat((String) document.get("key"), equalTo("Islamism"));
 		assertThat((String) document.get("title"), equalTo("Islamism"));
 		
 		assertThat((String) document.get("errors"), containsString("Error disambiguating text"));
-		
 	}
-
+	
 	@Test
 	public void processWikipediaPageToDocumentShouldProcessRedirectArticleCorrectly() throws Exception {
 		JSONObjectWritable document = mapper.processWikipediaPageToDocument(key, loadTestWikipediaPage("test-redirect-article.xml"));

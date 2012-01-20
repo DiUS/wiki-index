@@ -1,6 +1,8 @@
 package com.springsense.wikiindex;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -12,7 +14,6 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONString;
 
 import com.springsense.disambig.DisambiguationResult;
 import com.springsense.disambig.DisambiguationResult.Sentence;
@@ -89,23 +90,40 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 		}
 
 		Article article = new Article(key.get(), wikipediaPage);
-		getArticleAnnotator().annotate(article);
-
-		String articleText = article.getText();
 
 		JSONObjectWritable document = new JSONObjectWritable();
 		try {
 
 			document.put("key", article.getTitle());
-			document.put("content", articleText);
 			document.put("title", article.getTitle());
-			if ((article.isRedirect()) && (StringUtils.isNotBlank(article.getRedirectTarget()))) {
-				document.put("key", article.getRedirectTarget());
-				document.remove("content");
-			}
 
-			disambiguateAndStore(document, "title");
-			disambiguateAndStore(document, "content");
+			try {
+				getArticleAnnotator().annotate(article);
+				String articleText = article.getText();
+				document.put("content", articleText);
+
+				if ((article.isRedirect()) && (StringUtils.isNotBlank(article.getRedirectTarget()))) {
+					document.put("key", article.getRedirectTarget());
+					document.remove("content");
+				}
+
+				disambiguateAndStore(document, "title");
+				disambiguateAndStore(document, "content");
+			} catch (Exception e) {
+				StringWriter sw = new StringWriter();
+				PrintWriter pw = new PrintWriter(sw);
+
+				pw.printf("Error occured while processing this article ('%s')\n", article.getTitle());
+
+				e.printStackTrace(pw);
+
+				pw.flush();
+				sw.flush();
+
+				document.put("errors", sw.toString());
+
+				LOG.error(String.format("Error occured while processing article '%s'", article.getTitle()), e);
+			}
 		} catch (Exception e) {
 			throw new RuntimeException(String.format("Could not process wikipedia article '%s' due to an error", article.getTitle()), e);
 		}
@@ -118,7 +136,7 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 			return;
 		}
 
-		String springSenseRawFieldName = String.format("springsense.%s.raw", fieldName);
+		//String springSenseRawFieldName = String.format("springsense.%s.raw", fieldName);
 		String springSenseTextFieldName = String.format("springsense.%s.text", fieldName);
 
 		List<String> values = new LinkedList<String>();
@@ -138,7 +156,8 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 			SentenceDisambiguationResult[] result = getDisambiguator().disambiguateText(value, 3, false, true, false);
 			DisambiguationResult resultAsApi = convertToApiView(result);
 
-			//document.append(springSenseRawFieldName, new EmbeddedDisambiguationResult(result));
+			// document.append(springSenseRawFieldName, new
+			// EmbeddedDisambiguationResult(result));
 
 			int i = 0;
 			List<Variant> variants = resultAsApi.getVariants();
@@ -162,11 +181,14 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 	}
 
 	public ArticleAnnotator getArticleAnnotator() {
-		if ((articleAnnotator != null)) {
-			return articleAnnotator;
-		} else {
-			return articleAnnotator = new ArticleAnnotator();
+		if (articleAnnotator == null) {
+			setArticleAnnotator(new ArticleAnnotator());
 		}
+		return articleAnnotator;
+	}
+
+	protected void setArticleAnnotator(ArticleAnnotator articleAnnotator) {
+		this.articleAnnotator = articleAnnotator;
 	}
 
 	public Disambiguator getDisambiguator() {
@@ -190,4 +212,5 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 		}
 		return disambiguatorStore;
 	}
+
 }

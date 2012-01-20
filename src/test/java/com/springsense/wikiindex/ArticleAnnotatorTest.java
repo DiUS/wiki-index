@@ -40,6 +40,16 @@ public class ArticleAnnotatorTest {
 	}
 
 	@Test()
+	public void testTextShouldReturnArticleContentCorrectly2() throws IOException {
+		Article article = new Article(-1, loadTestWikipediaPage("test-article-islamism.xml"));
+		
+		articleRenderer.annotate(article);
+		String renderedText = article.getText();
+
+		assertThat(renderedText, not(containsString("<UNSUPPORTED")));
+	}
+
+	@Test()
 	public void testTextShouldReturnArticleContentWithXmlElementsAsTextCorrectly() throws IOException {
 		Article article = new Article(-1, loadTestWikipediaPage("test-article-abacus.xml"));
 		
