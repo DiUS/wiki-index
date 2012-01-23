@@ -38,7 +38,7 @@ define "wiki-index" do
     artifact('org.codehaus.jackson:jackson-mapper-asl:jar:1.8.5'),
   ]
   
-  DISAMBIGJ = artifact("com.springsense:disambigj:jar:2.0.2.73")
+  DISAMBIGJ = artifact("com.springsense:disambigj:jar:2.0.2.75")
   WIKITEXT = artifact("org.sweble.wikitext:swc-engine:jar:1.0.0")
   COMMONS_IO = artifact("commons-io:commons-io:jar:2.0.1")
 

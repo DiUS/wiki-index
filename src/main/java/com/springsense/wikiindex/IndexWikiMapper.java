@@ -71,19 +71,20 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 	@Override
 	protected void map(LongWritable key, WikipediaPage w, Context context) throws IOException, InterruptedException {
 
-		JSONObjectWritable document = processWikipediaPageToDocument(key, w);
+		JSONObjectWritable document = processWikipediaPageToDocument(context, key, w);
 		if (document == null) {
 			return;
 		}
 
 		try {
 			context.write(new Text(document.getString("key")), document);
+			context.progress();
 		} catch (JSONException e) {
 			throw new RuntimeException(String.format("Could not process wikipedia article '%s' due to an error", w.getTitle()), e);
 		}
 	}
 
-	public JSONObjectWritable processWikipediaPageToDocument(LongWritable key, WikipediaPage wikipediaPage) {
+	public JSONObjectWritable processWikipediaPageToDocument(Context context, LongWritable key, WikipediaPage wikipediaPage) {
 
 		if (!wikipediaPage.isArticle()) {
 			return null;
@@ -95,20 +96,26 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 		try {
 
 			document.put("key", article.getTitle());
+			context.progress();
 			document.put("title", article.getTitle());
+			context.progress();
 
 			try {
 				getArticleAnnotator().annotate(article);
 				String articleText = article.getText();
 				document.put("content", articleText);
+				context.progress();
 
 				if ((article.isRedirect()) && (StringUtils.isNotBlank(article.getRedirectTarget()))) {
 					document.put("key", article.getRedirectTarget());
 					document.remove("content");
 				}
-
+				
+				context.progress();
 				disambiguateAndStore(document, "title");
+				context.progress();
 				disambiguateAndStore(document, "content");
+				context.progress();
 			} catch (Exception e) {
 				StringWriter sw = new StringWriter();
 				PrintWriter pw = new PrintWriter(sw);

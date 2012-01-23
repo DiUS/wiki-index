@@ -14,7 +14,7 @@ public abstract class TestUtils {
 	}
 
 	protected static String loadTestResourceAsString(String testResourceName) throws IOException {
-		return IOUtils.toString(IndexWikiMapperTest.class.getClassLoader().getResourceAsStream(testResourceName), "UTF-8");
+		return IOUtils.toString(TestUtils.class.getClassLoader().getResourceAsStream(testResourceName), "UTF-8");
 	}
 
 }

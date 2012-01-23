@@ -18,6 +18,8 @@ import java.util.List;
 import org.apache.commons.io.IOUtils;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Mapper.Context;
 import org.apache.hadoop.mrunit.mapreduce.MapDriver;
 import org.apache.hadoop.mrunit.types.Pair;
 import org.json.JSONException;
@@ -37,10 +39,13 @@ public class IndexWikiMapperTest extends java.lang.Object {
 	private IndexWikiMapper mapper;
 	private MapDriver<LongWritable, WikipediaPage, Text, JSONObjectWritable> driver;
 	private WikipediaPage page;
+	private Mapper<LongWritable, WikipediaPage, Text, JSONObjectWritable>.Context context;
 	private final LongWritable key = new LongWritable(1024);
 
+	@SuppressWarnings("unchecked")
 	@Before()
 	public void setUp() throws Exception {
+		context = mock(Context.class);
 		mockDisambiguatorFactory = mock(DisambiguatorFactory.class);
 		mockDisambiguator = mock(Disambiguator.class);
 		when(mockDisambiguatorFactory.openNewDisambiguator()).thenReturn(mockDisambiguator);
@@ -101,7 +106,7 @@ public class IndexWikiMapperTest extends java.lang.Object {
 
 	@Test
 	public void processWikipediaPageToDocumentShouldProcessNormalArticleCorrectly() throws Exception {
-		JSONObjectWritable document = mapper.processWikipediaPageToDocument(key, loadTestWikipediaPage("test-article.xml"));
+		JSONObjectWritable document = mapper.processWikipediaPageToDocument(context, key, loadTestWikipediaPage("test-article.xml"));
 
 		assertThat((String) document.get("key"), equalTo("Red Army invasion of Azerbaijan"));
 		assertThat((String) document.get("title"), equalTo("Red Army invasion of Azerbaijan"));
@@ -117,7 +122,7 @@ public class IndexWikiMapperTest extends java.lang.Object {
 		
 		mapper.setArticleAnnotator(failingArticleAnnotator);
 		
-		JSONObjectWritable document = mapper.processWikipediaPageToDocument(key, loadTestWikipediaPage("test-article-fscked.xml"));
+		JSONObjectWritable document = mapper.processWikipediaPageToDocument(context, key, loadTestWikipediaPage("test-article-fscked.xml"));
 		
 		assertThat((String) document.get("errors"), containsString("Problem annotating article"));
 	}
@@ -127,7 +132,7 @@ public class IndexWikiMapperTest extends java.lang.Object {
 		String islamismText = loadTestResourceAsString("test-article-islamism.text");
 		when(this.mockDisambiguator.disambiguateText(islamismText, 3, false, true, false)).thenThrow(new RuntimeException("Error disambiguating text"));
 
-		JSONObjectWritable document = mapper.processWikipediaPageToDocument(key, loadTestWikipediaPage("test-article-islamism.xml"));
+		JSONObjectWritable document = mapper.processWikipediaPageToDocument(context, key, loadTestWikipediaPage("test-article-islamism.xml"));
 
 		verify(this.mockDisambiguator).disambiguateText("Islamism", 3, false, true, false);
 		verify(this.mockDisambiguator).disambiguateText(islamismText, 3, false, true, false);
@@ -141,7 +146,7 @@ public class IndexWikiMapperTest extends java.lang.Object {
 
 	@Test
 	public void processWikipediaPageToDocumentShouldProcessRedirectArticleCorrectly() throws Exception {
-		JSONObjectWritable document = mapper.processWikipediaPageToDocument(key, loadTestWikipediaPage("test-redirect-article.xml"));
+		JSONObjectWritable document = mapper.processWikipediaPageToDocument(context, key, loadTestWikipediaPage("test-redirect-article.xml"));
 
 		assertThat((String) document.get("key"), equalTo("Batman: Arkham City (comics)"));
 		assertThat((String) document.get("title"), equalTo("Batman: Arkham City (comic book)"));
@@ -150,14 +155,14 @@ public class IndexWikiMapperTest extends java.lang.Object {
 
 	@Test
 	public void processWikipediaPageToDocumentShouldReturnNullForTemplateArticle() throws Exception {
-		JSONObjectWritable document = mapper.processWikipediaPageToDocument(key, loadTestWikipediaPage("test-template-article.xml"));
+		JSONObjectWritable document = mapper.processWikipediaPageToDocument(context, key, loadTestWikipediaPage("test-template-article.xml"));
 
 		assertThat(document, nullValue());
 	}
 
 	@Test
 	public void processWikipediaPageToDocumentShouldReturnNullForFileArticle() throws Exception {
-		JSONObjectWritable document = mapper.processWikipediaPageToDocument(key, loadTestWikipediaPage("test-file-article.xml"));
+		JSONObjectWritable document = mapper.processWikipediaPageToDocument(context, key, loadTestWikipediaPage("test-file-article.xml"));
 
 		assertThat(document, nullValue());
 	}
