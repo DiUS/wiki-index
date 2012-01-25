@@ -59,7 +59,7 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 				// Print the jvm heap size.
 				LOG.info(String.format("Heap Size: %d", heapSize));
 
-				LOG.info(String.format("Starting new disambiguator with path '%s'", matrixDataDir));
+				LOG.info(String.format("Starting new disambiguator factory with path '%s'", matrixDataDir));
 				classLoaderDisambiguationFactory = new DisambiguatorFactory(matrixDataDir);
 				LOG.debug("Done.");
 			}
@@ -67,6 +67,25 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 			disambiguatorFactory = classLoaderDisambiguationFactory;
 		}
 	}
+
+	@Override
+	protected void cleanup(Context context) throws IOException, InterruptedException {
+		super.cleanup(context);
+		
+		LOG.info("Closing disambiguator for this thread.");
+		getDisambiguator().close();
+		
+		LOG.info("Removing disambiguator thread local for this thread.");
+		getDisambiguatorStore().remove();
+		
+		LOG.info("Nullifying disambiguator thread local store for this thread for ease of GC.");
+		disambiguatorStore = null;
+		
+		LOG.info("Explicitly calling GC...");
+		System.gc();
+		LOG.info("GC complete.");
+	}
+
 
 	@Override
 	protected void map(LongWritable key, WikipediaPage w, Context context) throws IOException, InterruptedException {
@@ -209,6 +228,7 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 				@Override
 				protected Disambiguator initialValue() {
 					try {
+						LOG.info("Opening a new disambiguator for this thread.");
 						return (disambiguatorFactory.openNewDisambiguator());
 					} catch (IOException e) {
 						throw new RuntimeException("Could not create new disambiguator due to an error", e);

@@ -119,17 +119,17 @@ def hadoop_dir
   ENV['HADOOP_HOME']
 end
 
-def hadoop_cmd
-  "#{hadoop_dir}/bin/hadoop jar #{hadoop_job_jar_filename} com.springsense.wikiindex.IndexWikipedia -input target/test/resources/enwiki-20110901-pages-articles-small.xml -output target/result -matrixDir /media/matrix.data/current/this"
+def hadoop_cmd(wiki_dump_xml)
+  "#{hadoop_dir}/bin/hadoop jar #{hadoop_job_jar_filename} com.springsense.wikiindex.IndexWikipedia -input #{wiki_dump_xml} -output target/result -matrixDir /media/matrix.data/current/this"
 end
 
 task 'wiki-index:test-run' => 'wiki-index:hadoop-job-jar' do
-  puts hadoop_dir
+  raise "HADOOP_HOME must be set" if hadoop_dir.nil? or hadoop_dir.empty?
   
   rm_rf 'target/result'
-  
-  puts hadoop_cmd
-  puts `#{hadoop_cmd}`
+  cmd = hadoop_cmd("target/test/resources/enwiki-20110901-pages-articles-small.xml")
+  puts cmd
+  run_command cmd
 end
 
 task :upload_to_s3 => [ 'wiki-index:hadoop-job-jar' ] do
