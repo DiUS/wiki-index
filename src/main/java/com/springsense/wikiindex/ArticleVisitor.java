@@ -168,7 +168,7 @@ public class ArticleVisitor extends Visitor {
 	
 	public void visit(org.sweble.wikitext.lazy.parser.DefinitionDefinition d) {
 		iterate(d.getContent());
-		iterate(d);
+		//iterate(d);
 	}
 	
 	public void visit(org.sweble.wikitext.lazy.parser.DefinitionTerm d) {

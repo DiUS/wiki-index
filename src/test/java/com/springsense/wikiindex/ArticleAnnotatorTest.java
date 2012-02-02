@@ -1,11 +1,17 @@
 package com.springsense.wikiindex;
 
-import static com.springsense.wikiindex.TestUtils.*;
-import static org.hamcrest.Matchers.*;
+import static com.springsense.wikiindex.TestUtils.loadTestResourceAsString;
+import static com.springsense.wikiindex.TestUtils.loadTestWikipediaPage;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.lessThan;
+import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.assertThat;
 
+import java.io.File;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -48,13 +54,25 @@ public class ArticleAnnotatorTest {
 
 		assertThat(renderedText, not(containsString("<UNSUPPORTED")));
 	}
+	
+	@Test()
+	public void testTextShouldReturnArticleContentCorrectlyWithComplexDefinitions() throws IOException {
+		Article article = new Article(-1, loadTestWikipediaPage("test-article-mark-antony.xml"));
+		
+		articleRenderer.annotate(article);
+		String renderedText = article.getText();
+
+		assertThat(renderedText, not(containsString("<UNSUPPORTED")));
+		
+		assertThat(renderedText.length(), lessThan(50000));
+		
+		assertThat(renderedText.replaceAll("\\s", ""), equalTo(loadTestResourceAsString("test-article-mark-antony.text").replaceAll("\\s", "")));
+	}
 
 	@Test()
 	public void testTextShouldReturnArticleContentWithXmlElementsAsTextCorrectly() throws IOException {
 		Article article = new Article(-1, loadTestWikipediaPage("test-article-abacus.xml"));
 		
-		//System.out.println(article.getWikitext());
-
 		articleRenderer.annotate(article);
 		String renderedText = article.getText();
 		
