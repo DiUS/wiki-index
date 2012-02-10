@@ -55,6 +55,13 @@ public class ArticleAnnotatorTest {
 		assertThat(renderedText, not(containsString("<UNSUPPORTED")));
 	}
 	
+	@Test(expected=RuntimeException.class)
+	public void testTextShouldHandleSeriouslyMalformedWikitextCorrectly() throws IOException {
+		Article article = new Article(-1, loadTestWikipediaPage("test-article-jefferson-disk.xml"));
+		
+		articleRenderer.annotate(article);
+	}
+	
 	@Test()
 	public void testTextShouldReturnArticleContentCorrectlyWithComplexDefinitions() throws IOException {
 		Article article = new Article(-1, loadTestWikipediaPage("test-article-mark-antony.xml"));

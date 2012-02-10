@@ -91,7 +91,23 @@ public class IndexWikiMapperTest extends java.lang.Object {
 		assertThat(firstPair.getFirst(), equalTo(new Text((String) document.get("key"))));
 		assertThat((String) document.get("key"), equalTo("Batman: Arkham City (comics)"));
 		assertThat((String) document.get("title"), equalTo("Batman: Arkham City (comic book)"));
+		assertThat((Boolean) document.get("disambiguation"), equalTo(Boolean.FALSE));
 		assertThat(document.opt("content"), nullValue());
+	}
+
+	@Test()
+	public void mapperShouldOutputTheMappedDocumentWithCorrectAttributeWhenDisambiguationPage() throws IOException, JSONException {
+		WikipediaPage page = loadTestWikipediaPage("test-article-alien.xml");
+		driver.setInput(key, page);
+
+		List<Pair<Text, JSONObjectWritable>> output = driver.run();
+
+		assertThat(output.size(), equalTo(1));
+
+		Pair<Text, JSONObjectWritable> firstPair = output.get(0);
+		JSONObjectWritable document = firstPair.getSecond();
+
+		assertThat((Boolean) document.get("disambiguation"), equalTo(Boolean.TRUE));
 	}
 
 	@Test()

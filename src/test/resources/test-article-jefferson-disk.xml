@@ -1,0 +1,224 @@
+<page>
+    <title>Jefferson disk</title>
+    <id>854993</id>
+    <revision>
+      <id>432324890</id>
+      <timestamp>2011-06-03T09:21:23Z</timestamp>
+      <contributor>
+        <username>Cydebot</username>
+        <id>1215485</id>
+      </contributor>
+      <minor />
+      <comment>Robot - Removing category Articles with Alice and Bob explanations per [[WP:CFD|CFD]] at [[Wikipedia:Categories for discussion/Log/2011 May 16]].</comment>
+      <text xml:space="preserve">[[Image:Jefferson's disk cipher.jpg|right|thumbnail|320px|Jefferson's disk cipher]]
+The '''Jefferson disk''', or ''wheel cypher'' as Jefferson named it, also known as the '''Bazeries Cylinder''', is a [[cipher system]] using a set of wheels or disks, each with the 26 letters of the alphabet arranged around their edge.  The order of the letters is different for each disk and is usually scrambled in some random way. Each disk is marked with a unique number. A hole in the centre of the disks allows them to be stacked on an [[axle]]. The disks are removable and can be mounted on the axle in any order desired. The order of the disks is the cipher [[key (cryptography)|key]], and both sender and receiver must arrange the disks in the same predefined order.  Jefferson's device had 36 disks. [Kahn, p.&amp;nbsp;194]
+
+Once the disks have been placed on the axle in the agreed order, the sender rotates each disk up and down until a desired message is spelled out in one row. Then the sender can copy down any row of text on the disks other than the one that contains the plaintext message. The recipient simply has to arrange the disks in the agreed-upon order, rotate the disks so they spell out the encrypted message on one row, and then look around the rows until he sees the plaintext message, i.e. the row that's not complete gibberish. There is an extremely small chance that there would be two readable messages, but that can be checked quickly by the person coding.
+
+First invented by [[Thomas Jefferson]] in 1795, this cipher did not become well-known and was independently invented by Commandant [[Etienne Bazeries]], the conqueror of the [[Great Cipher]], a century later. The system was used by the [[United States]] [[Army]] from 1923 until 1942 as the [[M-94]].
+
+This system is not considered secure against modern [[codebreaking]] if it is used to encrypt more than one row of text with the same ordering of disks (i.e. using the same key). ''See'' [[#Cryptanalysis]].
+
+==Operation==
+To encrypt a message, [[Alice and Bob|Alice]] rotates the disks to produce the [[plaintext]] message along one &quot;row&quot; of the stack of disks, and then selects another row as the [[ciphertext]]. To decrypt the message, Bob rotates the disks on his cylinder to produce the ciphertext along a row. It is handy if both Alice and Bob know the offset of the row, but not really necessary since Bob can simply look around the cylinder to find a row that makes sense.
+ 
+For example, a simplified &quot;toy&quot; Bazeries cylinder using only ten disks might be organised as shown below, with each disk &quot;unwrapped&quot; into a line and each marked with a designating number:
+
+{| border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;5&quot;
+| 1:
+| &lt;tt&gt;&lt; ZWAXJGDLUBVIQHKYPNTCRMOSFE &lt;&lt;/tt&gt;
+|-
+| 2:
+| &lt;tt&gt;&lt; KPBELNACZDTRXMJQOYHGVSFUWI &lt;&lt;/tt&gt;
+|-
+| 3:
+| &lt;tt&gt;&lt; BDMAIZVRNSJUWFHTEQGYXPLOCK &lt;&lt;/tt&gt;
+|-
+| 4:
+| &lt;tt&gt;&lt; RPLNDVHGFCUKTEBSXQYIZMJWAO &lt;&lt;/tt&gt;
+|-
+| 5:
+| &lt;tt&gt;&lt; IHFRLABEUOTSGJVDKCPMNZQWXY &lt;&lt;/tt&gt;
+|-
+| 6:
+| &lt;tt&gt;&lt; AMKGHIWPNYCJBFZDRUSLOQXVET &lt;&lt;/tt&gt;
+|-
+| 7:
+| &lt;tt&gt;&lt; GWTHSPYBXIZULVKMRAFDCEONJQ &lt;&lt;/tt&gt;
+|-
+| 8:
+| &lt;tt&gt;&lt; NOZUTWDCVRJLXKISEFAPMYGHBQ &lt;&lt;/tt&gt;
+|-
+| 9:
+| &lt;tt&gt;&lt; XPLTDSRFHENYVUBMCQWAOIKZGJ &lt;&lt;/tt&gt;
+|-
+| 10:
+| &lt;tt&gt;&lt; UDNAJFBOWTGVRSCZQKELMXYIHP &lt;&lt;/tt&gt;
+|-
+|}
+
+If the &quot;key&quot;, the sequence of disks, for this Bazeries cylinder is
+
+:7,9,5,10,1,6,3,8,2,4
+
+and Alice wants to send the message &quot;&lt;tt&gt;retreat now&lt;/tt&gt;&quot; to Bob, she rearranges the disks as per the key and rotates each disk to obtain the [[plaintext]], which is shown at the left, with spacing added for clarity:
+
+{| border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;5&quot;
+| 7:
+| &lt;tt&gt;&lt; R AFDCE O NJQGWTHSPYBXIZULVKM &lt;&lt;/tt&gt;
+|-
+| 9:
+| &lt;tt&gt;&lt; E NYVUB M CQWAOIKZGJXPLTDSRFH &lt;&lt;/tt&gt;
+|-
+| 5:
+| &lt;tt&gt;&lt; T SGJVD K CPMNZQWXYIHFRLABEUO &lt;&lt;/tt&gt;
+|-
+| 10:
+| &lt;tt&gt;&lt; R SCZQK E LMXYIHPUDNAJFBOWTGV &lt;&lt;/tt&gt;
+|-
+| 1:
+| &lt;tt&gt;&lt; E ZWAXJ G DLUBVIQHKYPNTCRMOSF &lt;&lt;/tt&gt;
+|-
+| 6:
+| &lt;tt&gt;&lt; A MKGHI W PNYCJBFZDRUSLOQXVET &lt;&lt;/tt&gt;
+|-
+| 3:
+| &lt;tt&gt;&lt; T EQGYX P LOCKBDMAIZVRNSJUWFH &lt;&lt;/tt&gt;
+|-
+| 8:
+| &lt;tt&gt;&lt; N OZUTW D CVRJLXKISEFAPMYGHBQ &lt;&lt;/tt&gt;
+|-
+| 2:
+| &lt;tt&gt;&lt; O YHGVS F UWIKPBELNACZDTRXMJQ &lt;&lt;/tt&gt;
+|-
+| 4:
+| &lt;tt&gt;&lt; W AORPL N DVHGFCUKTEBSXQYIZMJ &lt;&lt;/tt&gt;
+|-
+|}
+
+She then selects the ciphertext from the sixth row of the cylinder up from the plaintext. This ciphertext is also highlighted above with spacing, and gives:
+
+:&lt;tt&gt;OMKEGWPDFN&lt;/tt&gt;
+
+When Bob gets the ciphertext, he rearranges the disks on his cylinder to the key arrangement, rotates the disks to give the ciphertext, and then reads the plaintext six rows down from the ciphertext, or simply looks over the cylinder for a row that makes sense.
+
+==Basis for military ciphers==
+The Bazeries cylinder was the basis for the US &quot;[[M-94]]&quot; cipher machine, which was introduced in 1922 and derived from work by [[Parker Hitt]]. In 1914, Hitt had experimented with the Bazeries device, building one prototype using slides on a wooden frame, with the cipher alphabets printed twice consecutively on the slides, and then another using disks of wood. He forwarded his experiments up the Signal Corps chain of command, and in 1917 [[Joseph Mauborgne]] refined the scheme, with the final result being the M-94.
+
+The M-94 used 25 aluminium disks on a spindle. It was used by the [[Army]], [[Coast Guard]], and the Radio Intelligence Division of the [[Federal Communications Commission]] until early in [[World War II]]. The Army changed back to Hitt's original slide scheme with the &quot;[[M-138-A]]&quot; cipher machine, which was introduced in the 1930s and was used by the [[US Navy]] and [[US State Department]] through World War II. The M-138-A featured 100 strips, with 30 selected for use in any one cipher session. It was a considerable improvement in security for the [[State Department]], which during the interwar years had used laughably insecure codes, even in one case a standard commercial [[telegraph]] code. They were much more easily broken. 
+
+==Cryptanalysis==
+The Bazeries cylinder was a relatively strong system at the time (compared to many other systems in use), and Etienne Bazeries, a competent but very opinionated man, is said to have regarded it as indecipherable. In fact, it is hardly impregnable, and the &quot;Pers z&quot; code-breaking group of the German Foreign Office cracked the M-138-A in 1944. However, by that time the Americans had much more sophisticated cipher systems in operation. Many of the decrypts of Allied communications presented to the German high command were disregarded, because all they did was confirm bad news that nobody wanted to acknowledge in an environment where defeatism was potentially a capital crime. {{citation}}
+
+de Viaris (aka Marquis Gaetan Henri Leon Viarizio di Lesegno) who is famous for one of the first printing cipher devices (1874), solved the Bazeries cylinder in 1893, so Bazieries alleged confidence in the system was ill-placed.
+
+One major weakness of the Bazeries cylinder is that the offset from the plaintext letter to the ciphertext letter for the cipher alphabet on each disk will be exactly the same. In the example shown above, this offset is six letters.
+
+Suppose a [[cryptanalyst]] &amp;mdash; [[Sherlock Holmes|Holmes]], say &amp;mdash; has captured the simplified Bazeries cylinder described in the example above, with ten disks. This should not be enough to permit him to decipher messages with it, since he also has to know the key, or the arrangement of the disks on the cylinder. Even for this simplified Bazeries cylinder, the number of possible permutations of the disks are:
+
+&lt;math&gt;10! = 3,628,800&lt;/math&gt;
+
+&amp;mdash; which makes [[brute force attack|trial and error]] testing of the arrangement of the disks perfectly impractical to perform by hand; [[computer]]s would make such a break near trivial, however.
+
+Now, further suppose that Holmes has a [[crib (cryptanalysis)|crib]]. For example, suppose he knows that the first block of plaintext enciphered by the simplified Bazeries cylinder is the string:
+
+:&lt;tt&gt;heilhitler&lt;/tt&gt;
+
+Conveniently, this is exactly ten letters long, and can be enciphered in a single pass with the simplified Bazeries cylinder. The corresponding ciphertext is:
+
+:&lt;tt&gt;AZNCZEAPBH&lt;/tt&gt;
+
+The remainder of the message is of course a complete mystery for the moment. Fortunately, Holmes can use this crib to allow him to decipher all the following blocks of the message.
+
+Holmes has no idea of which disk is used to encipher which letter, but he does know that the offset between the plaintext letter and the ciphertext letter must be the same for all ten characters. This gives him a way of penetrating the cipher by lining up the plaintext and ciphertext characters of the crib; forming them into pairs; determining the offsets for the plaintext letters and ciphertext letters for each disk; and then searching for a common offset in the matrix of offset.
+
+Holmes knows that the correspondence between the two sets of letters is as follows:
+
+*&lt;tt&gt;h&lt;/tt&gt;&amp;mdash;&lt;tt&gt;A&lt;/tt&gt;
+*&lt;tt&gt;e&lt;/tt&gt;&amp;mdash;&lt;tt&gt;Z&lt;/tt&gt;
+*&lt;tt&gt;i&lt;/tt&gt;&amp;mdash;&lt;tt&gt;N&lt;/tt&gt;
+*&lt;tt&gt;l&lt;/tt&gt;&amp;mdash;&lt;tt&gt;C&lt;/tt&gt;
+*&lt;tt&gt;h&lt;/tt&gt;&amp;mdash;&lt;tt&gt;Z&lt;/tt&gt;
+*&lt;tt&gt;i&lt;/tt&gt;&amp;mdash;&lt;tt&gt;E&lt;/tt&gt;
+*&lt;tt&gt;t&lt;/tt&gt;&amp;mdash;&lt;tt&gt;A&lt;/tt&gt;
+*&lt;tt&gt;l&lt;/tt&gt;&amp;mdash;&lt;tt&gt;P&lt;/tt&gt;
+*&lt;tt&gt;e&lt;/tt&gt;&amp;mdash;&lt;tt&gt;B&lt;/tt&gt;
+*&lt;tt&gt;r&lt;/tt&gt;&amp;mdash;&lt;tt&gt;H&lt;/tt&gt;
+
+Now Holmes takes disk 1, which has the cipher alphabet:
+
+:1: &lt;tt&gt;&lt; ZWAXJGDLUBVIQHKYPNTCRMOSFE &lt;&lt;/tt&gt;
+
+The first letter pair is &quot;h:A&quot;, and Holmes counts along the disk to determine that the offset between the two letters is 15. The second letter pair is &quot;e:Z&quot;, and he sees right away that the offset is 1. He continues this process for each letter pair for disk 1, and then goes through the same procedure for the nine other disks, producing the following table:
+
+        h:A  e:Z  i:N  l:C  h:Z  i:E  t:A  l:P  e:B  r:H
+        ________________________________________________
+   1:    15    1    6   12   13   14   10    9   10   19
+   2:    14    5    6    3   16    4   22   23   25    7
+   3:    15   15    4    2   17   12   14   25   10    7
+   4:    18    7   10    7   14   20   12   25    1    6
+   5:     4   14   20   13   20    7   21   14   25   24
+   6:    22   16    3   17   10   19    1   14   14   14
+   7:    14   15   14    8    7   12   15   19   12   13
+   8:    21   12   12   22    5    2   14    8    8   14
+   9:    11   14   15   14   15   14   16   25    5    2
+   10:    5   23    5   21   17   21   20    6   14   12
+
+As Holmes prepares the table, the value &quot;14&quot; quickly jumps out at him as a common element, and in completion of the table proves to be the only common element. This is obviously the row offset from the plaintext to the ciphertext. He strips the other values out for clarity:
+
+        h:A  e:Z  i:N  l:C  h:Z  i:E  t:A  l:P  e:B  r:H
+        ________________________________________________
+   1:     -    -    -    -    -   14    -    -    -    -
+   2:    14    -    -    -    -    -    -    -    -    -
+   3:     -    -    -    -    -    -   14    -    -    -
+   4:     -    -    -    -   14    -    -    -    -    -
+   5:     -   14    -    -    -    -    -   14    -    -
+   6:     -    -    -    -    -    -    -   14   14   14
+   7:    14    -   14    -    -    -    -    -    -    -
+   8:     -    -    -    -    -    -   14    -    -   14
+   9:     -   14    -   14    -   14    -    -    -    -
+   10:    -    -    -    -    -    -    -    -   14    -
+
+Now Holmes rearranges the disks to reflect the correct order of the letters on the cylinder. This is done by rearranging the rows of the table so that the value &quot;14&quot; appears in every cell along the table's main diagonal. In this case, there are no ambiguities in the arrangement of the disks; but if there had been, a little testing of subsequent blocks of the ciphertext would reveal the proper order.
+
+        h:A  e:Z  i:N  l:C  h:Z  i:E  t:A  l:P  e:B  r:H
+        ________________________________________________
+   2:    14    -    -    -    -    -    -    -    -    -
+   5:     -   14    -    -    -    -    -   14    -    -
+   7:    14    -   14    -    -    -    -    -    -    -
+   9:     -   14    -   14    -   14    -    -    -    -
+   4:     -    -    -    -   14    -    -    -    -    -
+   1:     -    -    -    -    -   14    -    -    -    -
+   3:     -    -    -    -    -    -   14    -    -    -
+   6:     -    -    -    -    -    -    -   14   14   14
+   10:    -    -    -    -    -    -    -    -   14    -
+   8:     -    -    -    -    -    -   14    -    -   14
+
+This gives the key:
+
+:2,5,7,9,4,1,3,6,10,8
+
+In the real world, a Bazeries cylinder has more disks (commonly, 20 or 30 rather than 10), and it less likely there would be a single crib that would span the entire cylinder. Nevertheless, the approach described above still works. Even if the cylinder had 30 disks and a crib only had five letters, Holmes could build up a table of the offsets for each of the 30 disks for the five letter pairs, and use it to narrow down the possibilities for the offset and the disks used for the crib.
+
+Holmes could repeat the procedure with several independent cribs in the same message, almost certainly pinning down the offset quickly and giving an improved knowledge of the order of the disks. Once the offset has been determined, then Holmes would have what amounted to a straight transposition of the letters not determined by tinkering with the cribs, and use methods such as [[multiple anagramming]] to crack it.
+
+{{DerivedGoebelCrypto}}
+
+==Sources==
+*''The Codebreakers,'' [[David Kahn (writer)|David Kahn]], 1967, pp.&amp;nbsp;192-195
+{{reflist}}
+
+==External links==
+*[http://www.monticello.org/site/research-and-collections/wheel-cipher Thomas Jefferson's Wheel Cipher]
+
+{{Crypto navbox | machines}}
+
+[[Category:Encryption devices]]
+
+[[de:Jefferson-Walze]]
+[[fr:Cylindre de Jefferson]]
+[[ko:제퍼슨 디스크]]
+[[it:Rullo di Jefferson]]
+[[pl:Dysk Jeffersona]]</text>
+    </revision>
+  </page>

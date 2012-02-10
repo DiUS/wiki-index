@@ -31,6 +31,18 @@ public class ArticleTest {
 		assertThat(article.isArticle(), equalTo(true));
 	}
 	
+
+	@Test()
+	public void articleShouldInstantiateCorrectlyFromDisambigPage() throws IOException {
+		article = new Article(id, loadTestWikipediaPage("test-article-vietnam-veterans.xml"));
+
+		assertThat(article.id(), equalTo(id));
+		assertThat(article.getTitle(), equalTo("Vietnam Veterans"));
+		assertThat(article.isRedirect(), equalTo(false));
+		assertThat(article.isArticle(), equalTo(true));
+		assertThat(article.isDisambiguation(), equalTo(true));
+	}
+	
 	@Test()
 	public void articleShouldInstantiateCorrectlyFromRedirectPage() throws IOException {
 		article = new Article(id, loadTestWikipediaPage("test-redirect-article.xml"));

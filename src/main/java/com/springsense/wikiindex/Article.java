@@ -56,6 +56,10 @@ public class Article {
 		return wikipediaPage.isArticle();
 	}
 
+	public boolean isDisambiguation() {
+		return wikipediaPage.isDisambiguation();
+	}
+	
 	public String getRedirectTarget() {
 		return redirectTarget;
 	}

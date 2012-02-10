@@ -71,21 +71,20 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 	@Override
 	protected void cleanup(Context context) throws IOException, InterruptedException {
 		super.cleanup(context);
-		
+
 		LOG.info("Closing disambiguator for this thread.");
 		getDisambiguator().close();
-		
+
 		LOG.info("Removing disambiguator thread local for this thread.");
 		getDisambiguatorStore().remove();
-		
+
 		LOG.info("Nullifying disambiguator thread local store for this thread for ease of GC.");
 		disambiguatorStore = null;
-		
+
 		LOG.info("Explicitly calling GC...");
 		System.gc();
 		LOG.info("GC complete.");
 	}
-
 
 	@Override
 	protected void map(LongWritable key, WikipediaPage w, Context context) throws IOException, InterruptedException {
@@ -129,7 +128,8 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 					document.put("key", article.getRedirectTarget());
 					document.remove("content");
 				}
-				
+				document.put("disambiguation", article.isDisambiguation());
+
 				context.progress();
 				disambiguateAndStore(document, "title");
 				context.progress();
@@ -162,7 +162,8 @@ public class IndexWikiMapper extends Mapper<LongWritable, WikipediaPage, Text, J
 			return;
 		}
 
-		//String springSenseRawFieldName = String.format("springsense.%s.raw", fieldName);
+		// String springSenseRawFieldName = String.format("springsense.%s.raw",
+		// fieldName);
 		String springSenseTextFieldName = String.format("springsense.%s.text", fieldName);
 
 		List<String> values = new LinkedList<String>();
